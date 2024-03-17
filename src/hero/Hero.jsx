@@ -64,6 +64,19 @@ const Hero = () => {
                   <ion-icon name='open-outline'></ion-icon>
                </Card>
             </Link>
+            <Link
+               className='link'
+               href='shane_koester_resume.pdf'
+               download='shane_koester_resume.pdf'
+               target='_blank'
+               rel='noopener noreferrer'
+               style={{ '--clr': '#df2bef77' }}
+            >
+               <Card>
+                  <Title>Résumé</Title>
+                  <ion-icon name='download-outline'></ion-icon>{' '}
+               </Card>
+            </Link>
          </Container>
       </Wrapper>
    );

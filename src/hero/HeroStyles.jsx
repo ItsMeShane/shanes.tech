@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
    width: 500px;
-   height: 700px;
+   height: 70%;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -39,19 +39,20 @@ export const Container = styled.div`
       content: '';
       position: absolute;
       pointer-events: none;
-      width: inherit;
+      width: 70%;
+      max-width: 500px;
       height: inherit;
       border: 10px solid;
       border-image: linear-gradient(to right, #ff00cc, #3333ff) 1;
 
       @media (max-width: 768px) {
-         display: none;
+         border-image-slice: 1 0;
       }
    }
 
    @media (max-width: 768px) {
       width: 90%;
-      height: fit-content;
+      height: 70%;
    }
 `;
 
@@ -107,5 +108,9 @@ export const Link = styled.a`
 
    @media (max-width: 768px) {
       width: 90%;
+
+      &:hover {
+         color: var(--clr);
+      }
    }
 `;
