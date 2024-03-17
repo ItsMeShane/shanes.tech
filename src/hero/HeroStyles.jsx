@@ -7,30 +7,54 @@ export const Wrapper = styled.div`
    justify-content: center;
    align-items: center;
    background-color: #222222;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: var(--y, -300px);
+      left: var(--x);
+      transform: translate(-50%, -50%);
+      background-color: #2e2e2e;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      filter: blur(5px);
+      @media (max-width: 768px) {
+         display: none;
+      }
+   }
 `;
 
 export const Container = styled.div`
-   width: 600px;
-   height: 900px;
+   width: 500px;
+   height: 700px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    gap: 40px;
+   overflow: hidden;
 
-   &::before {
-    content:'';
-    position:absolute;
-    top:var(--y);
-    left:var(--x);
-    transform:translate(-50%, -50%);
-    background-color:#2e2e2e;
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    filter: blur(5px);
+   &::after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      width: inherit;
+      height: inherit;
+      border: 10px solid;
+      border-image: linear-gradient(to right, #ff00cc, #3333ff) 1;
+
+      @media (max-width: 768px) {
+         display: none;
+      }
+   }
+
+   @media (max-width: 768px) {
+      width: 90%;
+      height: fit-content;
    }
 `;
+
 export const Card = styled.div`
    display: flex;
    flex-direction: row;
@@ -41,7 +65,7 @@ export const Card = styled.div`
 
 export const Title = styled.span`
    font-weight: 600;
-   pointer-events:none;
+   pointer-events: none;
    flex: 1;
 `;
 
@@ -56,24 +80,32 @@ export const Link = styled.a`
    background-color: #333333;
    border-radius: 40px;
    width: 350px;
-   height:fit-content;
+   height: fit-content;
    transition: color 0.25s;
    color: #ffffff55;
-   overflow:hidden;
+   overflow: hidden;
+
    &:hover {
-    color: #ffffffee;
+      color: #ffffffee;
    }
 
    &::before {
-    content:'';
-    position:absolute;
-    transform:translate(-50%, -50%);
-    background-color:var(--clr);
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    top:var(--y);
-    left:var(--x);
-    filter: blur(5px);
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background-color: var(--clr);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      top: var(--y, -300px);
+      left: var(--x);
+      filter: blur(5px);
+      @media (max-width: 768px) {
+         display: none;
+      }
+   }
+
+   @media (max-width: 768px) {
+      width: 90%;
    }
 `;
