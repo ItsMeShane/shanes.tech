@@ -1,0 +1,72 @@
+import React, { useRef, useEffect } from 'react';
+import { Card, Container, Link, Title, Wrapper } from './HeroStyles';
+
+const Hero = () => {
+   const wrapperRef = useRef(null);
+
+   useEffect(() => {
+      const wrapper = wrapperRef.current;
+      if (!wrapper) return;
+
+      const links = wrapper.querySelectorAll('.link');
+      const handleMouseMove = (e) => {
+         let mx = e.pageX - wrapper.offsetLeft;
+         let my = e.pageY - wrapper.offsetTop;
+         wrapper.style.setProperty(`--x`, mx + `px`);
+         wrapper.style.setProperty(`--y`, my + `px`);
+         links.forEach((link) => {
+            mx = e.pageX - link.offsetLeft;
+            my = e.pageY - link.offsetTop;
+            link.style.setProperty(`--x`, mx + `px`);
+            link.style.setProperty(`--y`, my + `px`);
+         });
+      };
+
+      wrapper.addEventListener('mousemove', handleMouseMove);
+   }, []);
+
+   return (
+      <Wrapper ref={wrapperRef}>
+         <Container>
+            <Link
+               className='link'
+               href='https://www.linkedin.com/in/shanekoester/'
+               target='_blank'
+               rel='noopener noreferrer'
+               style={{ '--clr': '#2badef77' }}
+            >
+               <Card>
+                  <Title>LinkedIn</Title>
+                  <ion-icon name='open-outline'></ion-icon>
+               </Card>
+            </Link>
+            <Link
+               className='link'
+               href='https://www.github.com/ItsMeShane'
+               target='_blank'
+               rel='noopener noreferrer'
+               style={{ '--clr': '#2b42ef77' }}
+            >
+               <Card>
+                  <Title>GitHub</Title>
+                  <ion-icon name='open-outline'></ion-icon>
+               </Card>
+            </Link>
+            <Link
+               className='link'
+               href='https://www.shanes.chat'
+               target='_blank'
+               rel='noopener noreferrer'
+               style={{ '--clr': '#2bef7d77' }}
+            >
+               <Card>
+                  <Title>Portfolio</Title>
+                  <ion-icon name='open-outline'></ion-icon>
+               </Card>
+            </Link>
+         </Container>
+      </Wrapper>
+   );
+};
+
+export default Hero;
