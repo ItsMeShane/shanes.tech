@@ -7,25 +7,8 @@ export const Wrapper = styled.div`
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: #222222;
    font-size: 2rem;
    font-weight: 600;
-
-   &::before {
-      content: '';
-      position: absolute;
-      top: var(--y, -300px);
-      left: var(--x);
-      transform: translate(-50%, -50%);
-      background-color: #2e2e2e;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      filter: blur(5px);
-      @media (max-width: 768px) {
-         display: none;
-      }
-   }
 `;
 
 export const Header = styled.span`
@@ -34,10 +17,10 @@ export const Header = styled.span`
    z-index: 1;
    position: absolute;
    top: 9%;
-   
+
    @media (max-width: 768px) {
       width: 90%;
-      text-align:center;
+      text-align: center;
    }
 `;
 
@@ -82,8 +65,8 @@ export const Card = styled.div`
 export const Title = styled.span`
    pointer-events: none;
    flex: 1;
+   z-index:1;
 `;
-
 export const Link = styled.a`
    padding: 15px 25px;
    position: relative;
@@ -95,11 +78,21 @@ export const Link = styled.a`
    border-radius: 40px;
    width: 350px;
    height: fit-content;
-   transition: color 0.25s;
+   transition: color 0.25s, background-color 1s;
    color: #ffffff55;
 
    &:hover {
-      color: #ffffffee;
+      color: #ffffffcc;
+      background-color: var(--clr);
+      &::before {
+         width: 700px;
+         height: 700px;
+         top: 50%;
+         left: 50%;
+         top: var(--y, -300px);
+         left: var(--x);
+         transform: translate(-50%, -50%);
+      }
    }
 
    &::before {
@@ -107,12 +100,13 @@ export const Link = styled.a`
       position: absolute;
       transform: translate(-50%, -50%);
       background-color: var(--clr);
-      width: 200px;
-      height: 200px;
+      width: 0;
+      height: 0;
       border-radius: 50%;
       top: var(--y, -300px);
       left: var(--x);
       filter: blur(5px);
+      transition: width 1s, height 1s;
       @media (max-width: 768px) {
          display: none;
       }
@@ -122,7 +116,7 @@ export const Link = styled.a`
       width: 90%;
 
       &:hover {
-         color: var(--clr);
+         background-color: var(--clr);
       }
    }
 `;

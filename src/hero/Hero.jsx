@@ -10,24 +10,23 @@ const Hero = () => {
 
       const links = wrapper.querySelectorAll('.link');
       const handleMouseMove = (e) => {
-         let mx = e.pageX - wrapper.offsetLeft;
-         let my = e.pageY - wrapper.offsetTop;
-         wrapper.style.setProperty(`--x`, mx + `px`);
-         wrapper.style.setProperty(`--y`, my + `px`);
          links.forEach((link) => {
-            mx = e.pageX - link.offsetLeft;
-            my = e.pageY - link.offsetTop;
+            let mx = e.pageX - link.offsetLeft;
+            let my = e.pageY - link.offsetTop;
             link.style.setProperty(`--x`, mx + `px`);
             link.style.setProperty(`--y`, my + `px`);
          });
       };
 
       wrapper.addEventListener('mousemove', handleMouseMove);
+      return () => {
+         wrapper.removeEventListener('mousemove', handleMouseMove);
+      };
    }, []);
 
    return (
       <Wrapper ref={wrapperRef}>
-            <Header>Shane Koester</Header>
+         <Header>Shane Koester</Header>
          <Container>
             <Link
                className='link'
