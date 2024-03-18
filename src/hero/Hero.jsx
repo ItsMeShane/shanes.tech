@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Card, Container, Link, Title, Wrapper } from './HeroStyles';
+import { Card, Container, Header, Link, Title, Wrapper } from './HeroStyles';
 
 const Hero = () => {
    const wrapperRef = useRef(null);
@@ -27,6 +27,7 @@ const Hero = () => {
 
    return (
       <Wrapper ref={wrapperRef}>
+            <Header>Shane Koester</Header>
          <Container>
             <Link
                className='link'

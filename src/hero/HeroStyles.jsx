@@ -4,9 +4,12 @@ export const Wrapper = styled.div`
    height: 100vh;
    width: 100vw;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    background-color: #222222;
+   font-size: 2rem;
+   font-weight: 600;
 
    &::before {
       content: '';
@@ -25,6 +28,19 @@ export const Wrapper = styled.div`
    }
 `;
 
+export const Header = styled.span`
+   width: 500px;
+   color: #fff;
+   z-index: 1;
+   position: absolute;
+   top: 9%;
+   
+   @media (max-width: 768px) {
+      width: 90%;
+      text-align:center;
+   }
+`;
+
 export const Container = styled.div`
    width: 500px;
    height: 70%;
@@ -33,7 +49,6 @@ export const Container = styled.div`
    justify-content: center;
    align-items: center;
    gap: 40px;
-   overflow: hidden;
 
    &::after {
       content: '';
@@ -65,14 +80,12 @@ export const Card = styled.div`
 `;
 
 export const Title = styled.span`
-   font-weight: 600;
    pointer-events: none;
    flex: 1;
 `;
 
 export const Link = styled.a`
    padding: 15px 25px;
-   font-size: 2rem;
    position: relative;
    display: flex;
    justify-content: center;
@@ -84,7 +97,6 @@ export const Link = styled.a`
    height: fit-content;
    transition: color 0.25s;
    color: #ffffff55;
-   overflow: hidden;
 
    &:hover {
       color: #ffffffee;
