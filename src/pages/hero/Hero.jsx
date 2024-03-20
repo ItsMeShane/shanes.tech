@@ -74,7 +74,7 @@ const Hero = () => {
             >
                <Card>
                   <Title>Résumé</Title>
-                  <ion-icon name='download-outline'></ion-icon>{' '}
+                  <ion-icon name='download-outline'></ion-icon>
                </Card>
             </Link>
          </Container>
