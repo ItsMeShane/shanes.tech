@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Hero from './pages/hero/Hero';
-import Projects from './pages/projects/Projects';
-import PageNotFound from './pages/PageNotFound';
+import Portfolio from './pages/portfolio/Portfolio';
+import Collection from './pages/collection/Collection';
+import PageNotFound from './pages/error404/PageNotFound';
 
 function App() {
    return (
@@ -9,7 +10,9 @@ function App() {
          <Routes>
             <Route path='*' element={<PageNotFound />} />
             <Route path='/' index element={<Hero />} />
-            <Route path='/projects' element={<Projects />} />
+            <Route path='/home' index element={<Hero />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/collection' element={<Collection />} />
          </Routes>
       </BrowserRouter>
    );

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Card, Container, Header, Link, Title, Wrapper } from './HeroStyles';
+import { Card, Container, Header, Link, LinkWrapper, Title, Wrapper } from './HeroStyles';
 
 const Hero = () => {
    const wrapperRef = useRef(null);
@@ -28,55 +28,58 @@ const Hero = () => {
       <Wrapper ref={wrapperRef}>
          <Header>Shane Koester</Header>
          <Container>
-            <Link
-               className='link'
-               href='https://www.linkedin.com/in/shanekoester/'
-               target='_blank'
-               rel='noopener noreferrer'
-               style={{ '--clr': '#2badef77' }}
-            >
-               <Card>
-                  <Title>LinkedIn</Title>
-                  <ion-icon name='open-outline'></ion-icon>
-               </Card>
-            </Link>
-            <Link
-               className='link'
-               href='https://www.github.com/ItsMeShane'
-               target='_blank'
-               rel='noopener noreferrer'
-               style={{ '--clr': '#2b42ef77' }}
-            >
-               <Card>
-                  <Title>GitHub</Title>
-                  <ion-icon name='open-outline'></ion-icon>
-               </Card>
-            </Link>
-            <Link
-               className='link'
-               href='https://www.shanes.chat'
-               target='_blank'
-               rel='noopener noreferrer'
-               style={{ '--clr': '#2bef7d77' }}
-            >
-               <Card>
-                  <Title>Portfolio</Title>
-                  <ion-icon name='open-outline'></ion-icon>
-               </Card>
-            </Link>
-            <Link
-               className='link'
-               href='shane_koester_resume.pdf'
-               download='shane_koester_resume.pdf'
-               target='_blank'
-               rel='noopener noreferrer'
-               style={{ '--clr': '#df2bef77' }}
-            >
-               <Card>
-                  <Title>Résumé</Title>
-                  <ion-icon name='download-outline'></ion-icon>
-               </Card>
-            </Link>
+            <LinkWrapper>
+               <Link
+                  className='link'
+                  href='https://www.linkedin.com/in/shanekoester/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{ '--clr1': '#0082b5', '--clr2': '#003448' }}
+               >
+                  <Card>
+                     <Title>LinkedIn</Title>
+                     <ion-icon name='open-outline'></ion-icon>
+                  </Card>
+               </Link>
+            </LinkWrapper>
+            <LinkWrapper>
+               <Link
+                  className='link'
+                  href='https://www.github.com/ItsMeShane'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{ '--clr1': '#545994', '--clr2': '#22243b' }}
+               >
+                  <Card>
+                     <Title>GitHub</Title>
+                     <ion-icon name='open-outline'></ion-icon>
+                  </Card>
+               </Link>
+            </LinkWrapper>
+            <LinkWrapper>
+               <Link
+                  className='link'
+                  href='/portfolio'
+                  style={{ '--clr1': '#945489', '--clr2': '#3b2237' }}
+               >
+                  <Card>
+                     <Title>Portfolio</Title>
+                     <ion-icon name='arrow-forward-circle-outline'></ion-icon>
+                  </Card>
+               </Link>
+            </LinkWrapper>
+            <LinkWrapper>
+               <Link
+                  className='link'
+                  href='/collection'
+                  style={{ '--clr1': '#6e5494', '--clr2': '#211668' }}
+               >
+                  <Card>
+                     <Title>Collection</Title>
+                     <ion-icon name='arrow-forward-circle-outline'></ion-icon>
+                  </Card>
+               </Link>
+            </LinkWrapper>
          </Container>
       </Wrapper>
    );

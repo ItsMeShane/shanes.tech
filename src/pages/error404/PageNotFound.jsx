@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import Error404 from './Error404';
 
 const Wrapper = styled.div`
    display: flex;
@@ -96,6 +97,7 @@ const PageNotFound = () => {
    return (
       <Wrapper ref={wrapperRef}>
          <Container>
+            <Error404 />
             <ErrorMessage>Whoops, that URL does not exist.</ErrorMessage>
             <Link href='/' ref={linkRef}>
                <span>Hero Page</span>
