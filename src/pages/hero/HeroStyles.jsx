@@ -11,17 +11,6 @@ export const Wrapper = styled.div`
    font-weight: 600;
 `;
 
-export const Header = styled.span`
-   color: #eeeeee;
-   position: relative;
-   margin-bottom: 0.5rem;
-   text-align: center;
-
-   @media (max-width: 768px) {
-      width: 90%;
-   }
-`;
-
 export const Container = styled.div`
    width: 500px;
    width: fit-content;
@@ -29,6 +18,7 @@ export const Container = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
+   overflow-x: hidden;
    overflow-y: auto;
    gap: 40px;
    padding: 60px;
@@ -54,7 +44,8 @@ export const Container = styled.div`
    }
 `;
 
-export const Link = styled.a`
+export const Card = styled.div`
+   overflow: hidden;
    padding: 15px 25px;
    position: relative;
    display: flex;
@@ -121,10 +112,9 @@ export const Link = styled.a`
 
 export const LinkWrapper = styled.div`
    width: 350px;
-   overflow: visible;
    transition: 1s;
    &:hover {
-      ${Link} {
+      ${Card} {
          transition-delay: 0.2s;
          transform: translateX(15px);
          @media (max-width: 768px), (max-height: 500px) {
@@ -133,18 +123,13 @@ export const LinkWrapper = styled.div`
          }
       }
    }
+   a {
+      text-decoration: none;
+   }
    @media (max-width: 768px), (max-height: 500px) {
       width: 80%;
       min-width: 275px;
    }
-`;
-
-export const Card = styled.div`
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
 `;
 
 export const Title = styled.span`

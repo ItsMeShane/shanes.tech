@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { Card, Container, Header, Link, LinkWrapper, Title, Wrapper } from './HeroStyles';
+import { Link } from 'react-router-dom';
+import { Card, Container, LinkWrapper, Title, Wrapper } from './HeroStyles';
 
 const Hero = () => {
    const wrapperRef = useRef(null);
@@ -26,56 +27,55 @@ const Hero = () => {
 
    return (
       <Wrapper ref={wrapperRef}>
-         <Header>Shane Koester</Header>
          <Container>
             <LinkWrapper>
-               <Link
-                  className='link'
+               <a
                   href='https://www.linkedin.com/in/shanekoester/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  style={{ '--clr1': '#0082b5', '--clr2': '#003448' }}
                >
-                  <Card>
+                  <Card
+                     className='link'
+                     style={{ '--clr1': '#0082b5', '--clr2': '#003448' }}
+                  >
                      <Title>LinkedIn</Title>
                      <ion-icon name='open-outline'></ion-icon>
                   </Card>
-               </Link>
+               </a>
             </LinkWrapper>
             <LinkWrapper>
-               <Link
-                  className='link'
+               <a
                   href='https://www.github.com/ItsMeShane'
                   target='_blank'
                   rel='noopener noreferrer'
-                  style={{ '--clr1': '#545994', '--clr2': '#22243b' }}
                >
-                  <Card>
+                  <Card
+                     className='link'
+                     style={{ '--clr1': '#545994', '--clr2': '#22243b' }}
+                  >
                      <Title>GitHub</Title>
                      <ion-icon name='open-outline'></ion-icon>
                   </Card>
-               </Link>
+               </a>
             </LinkWrapper>
             <LinkWrapper>
-               <Link
-                  className='link'
-                  href='/portfolio'
-                  style={{ '--clr1': '#945489', '--clr2': '#3b2237' }}
-               >
-                  <Card>
+               <Link to='/portfolio'>
+                  <Card
+                     className='link'
+                     style={{ '--clr1': '#945489', '--clr2': '#3b2237' }}
+                  >
                      <Title>Portfolio</Title>
                      <ion-icon name='arrow-forward-circle-outline'></ion-icon>
                   </Card>
                </Link>
             </LinkWrapper>
             <LinkWrapper>
-               <Link
-                  className='link'
-                  href='/collection'
-                  style={{ '--clr1': '#6e5494', '--clr2': '#211668' }}
-               >
-                  <Card>
-                     <Title>Collection</Title>
+               <Link to='/projects'>
+                  <Card
+                     className='link'
+                     style={{ '--clr1': '#6e5494', '--clr2': '#211668' }}
+                  >
+                     <Title>Projects</Title>
                      <ion-icon name='arrow-forward-circle-outline'></ion-icon>
                   </Card>
                </Link>

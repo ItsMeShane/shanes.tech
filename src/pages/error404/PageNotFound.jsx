@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Error404 from './Error404';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
    display: flex;
@@ -15,6 +16,9 @@ const Container = styled.div`
    justify-content: center;
    align-items: center;
    height: fit-content;
+   a {
+      text-decoration: none;
+   }
 `;
 
 const ErrorMessage = styled.p`
@@ -24,7 +28,8 @@ const ErrorMessage = styled.p`
    margin-bottom: 40px;
 `;
 
-const Link = styled.a`
+const Card = styled.div`
+   overflow: hidden;
    cursor: pointer;
    position: relative;
    display: flex;
@@ -32,7 +37,6 @@ const Link = styled.a`
    align-items: center;
    width: 300px;
    height: 75px;
-   text-decoration: none;
    color: #ffffff;
    border-radius: 3rem;
    padding: 10px 20px;
@@ -99,8 +103,10 @@ const PageNotFound = () => {
          <Container>
             <Error404 />
             <ErrorMessage>Whoops, that URL does not exist.</ErrorMessage>
-            <Link href='/' ref={linkRef}>
-               <span>Hero Page</span>
+            <Link to='/' ref={linkRef}>
+               <Card>
+                  <span>Hero Page</span>
+               </Card>
             </Link>
          </Container>
       </Wrapper>
