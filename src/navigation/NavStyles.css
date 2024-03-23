@@ -107,4 +107,7 @@
    .navbar-links.menu-open {
       display: flex;
    }
+   .navbar-links ul li a:hover::after {
+      width: 0;
+   }
 }

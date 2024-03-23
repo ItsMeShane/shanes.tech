@@ -36,13 +36,13 @@ export default function NavBar() {
          <Link to='/' className='brand-title'>
             Shane Koester
          </Link>
-         <a
+         <div
             className='toggle-menu'
             ref={menuRef}
             onClick={handleToggleButtonClick}
          >
             <ion-icon name='menu-outline'></ion-icon>
-         </a>
+         </div>
          <div className='navbar-links' ref={navbarLinksRef}>
             <ul>
                <CustomLink to='/portfolio' onClick={handleLinkClick}>
