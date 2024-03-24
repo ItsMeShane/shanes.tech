@@ -36,11 +36,12 @@ const Card = styled.div`
    background: linear-gradient(to right, var(--clr1), var(--clr2));
    height: fit-content;
    min-height: 50px;
-   transition: color 0.25s, background-color 1s, transform 0.5s;
+   transition: color 0.25s, background-color 1s, transform 0.5s, text-shadow 0.25s ease-out;
    color: #ffffff55;
    z-index: 1;
    &:hover {
       color: #ffffffcc;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
       &::before {
          width: 700px;
          height: 700px;
