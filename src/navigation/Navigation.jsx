@@ -27,30 +27,44 @@ export default function NavBar() {
       navbarLinksRef.current.classList.toggle('menu-open');
    };
 
-   const handleLinkClick = () => {
+   const handleLinkClick = (event, targetId) => {
+      goToSection(event, targetId);
       navbarLinksRef.current.classList.remove('menu-open');
    };
 
    return (
       <nav className='navbar'>
-         <Link to='/' className='brand-title'>
+         <Link to='/' className='name' onClick={(e) => handleLinkClick(e, '#hero')}>
             Shane Koester
          </Link>
-         <div
-            className='toggle-menu'
-            ref={menuRef}
-            onClick={handleToggleButtonClick}
-         >
+         <div className='toggle-menu' ref={menuRef} onClick={handleToggleButtonClick}>
             <ion-icon name='menu-outline'></ion-icon>
          </div>
          <div className='navbar-links' ref={navbarLinksRef}>
             <ul>
-               <CustomLink to='/portfolio' onClick={handleLinkClick}>
-                  Portfolio
-               </CustomLink>
-               <CustomLink to='/projects' onClick={handleLinkClick}>
-                  Projects
-               </CustomLink>
+               <li>
+                  <a href='#chat' onClick={(e) => handleLinkClick(e, '#chat')}>
+                     Chat
+                  </a>
+               </li>
+               <li>
+                  <a href='#projects' onClick={(e) => handleLinkClick(e, '#projects')}>
+                     Projects
+                  </a>
+               </li>
+               <li>
+                  <a
+                     href='#experience'
+                     onClick={(e) => handleLinkClick(e, '#experience')}
+                  >
+                     Experience
+                  </a>
+               </li>
+               <li>
+                  <a href='#about' onClick={(e) => handleLinkClick(e, '#about')}>
+                     About
+                  </a>
+               </li>
             </ul>
          </div>
       </nav>
@@ -68,3 +82,11 @@ function CustomLink({ to, children, onClick, ...props }) {
       </li>
    );
 }
+
+export const goToSection = (event, targetId) => {
+   event.preventDefault();
+   const targetElement = document.querySelector(targetId);
+   if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+   }
+};

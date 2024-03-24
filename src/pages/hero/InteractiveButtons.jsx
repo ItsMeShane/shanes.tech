@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { goToSection } from '../../navigation/Navigation';
 
 const Container = styled.div`
    font-size: 2rem;
@@ -174,26 +174,26 @@ const InteractiveButtons = () => {
             </a>
          </LinkWrapper>
          <LinkWrapper style={{ '--offset': '40px' }}>
-            <Link to='/portfolio'>
-               <Card
-                  className='link'
-                  style={{ '--clr1': '#945489', '--clr2': '#3b2237' }}
-               >
-                  <span>Portfolio</span>
-                  <ion-icon name='arrow-forward-circle-outline'></ion-icon>
-               </Card>
-            </Link>
-         </LinkWrapper>
-         <LinkWrapper style={{ '--offset': '60px' }}>
-            <Link to='/projects'>
+            <a href='#projects' onClick={(e) => goToSection(e, '#projects')}>
                <Card
                   className='link'
                   style={{ '--clr1': '#6e5494', '--clr2': '#211668' }}
                >
                   <span>Projects</span>
-                  <ion-icon name='arrow-forward-circle-outline'></ion-icon>
+                  <ion-icon name='arrow-down-circle-outline'></ion-icon>{' '}
                </Card>
-            </Link>
+            </a>
+         </LinkWrapper>
+         <LinkWrapper style={{ '--offset': '60px' }}>
+            <a href='#experience' onClick={(e) => goToSection(e, '#experience')}>
+               <Card
+                  className='link'
+                  style={{ '--clr1': '#945489', '--clr2': '#3b2237' }}
+               >
+                  <span>Experience</span>
+                  <ion-icon name='arrow-down-circle-outline'></ion-icon>{' '}
+               </Card>
+            </a>
          </LinkWrapper>
       </Container>
    );

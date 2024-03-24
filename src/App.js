@@ -1,20 +1,35 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Hero from './pages/hero/Hero';
-import Portfolio from './pages/portfolio/Portfolio';
+import Experience from './pages/experience/Experience';
 import PageNotFound from './pages/error404/PageNotFound';
 import NavBar from './navigation/Navigation';
 import Projects from './pages/projects/Projects';
 
+const PortfolioContent = () => {
+   return (
+      <>
+         <div id='hero'>
+            <Hero />
+         </div>
+         <div id='chat'></div>
+         <div id='projects'>
+            <Projects />
+         </div>
+         <div id='experience'>
+            <Experience />
+         </div>
+         <div id='about'></div>
+      </>
+   );
+};
 function App() {
    return (
       <BrowserRouter>
-      <NavBar />
+         <NavBar />
          <Routes>
             <Route path='*' element={<PageNotFound />} />
-            <Route path='/' index element={<Hero />} />
-            <Route path='/home' index element={<Hero />} />
-            <Route path='/portfolio' element={<Portfolio />} />
-            <Route path='/projects' element={<Projects />} />
+            <Route path='/' index element={<PortfolioContent />} />
+            <Route path='/home' element={<PortfolioContent />} />
          </Routes>
       </BrowserRouter>
    );
