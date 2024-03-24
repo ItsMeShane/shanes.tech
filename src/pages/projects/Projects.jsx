@@ -1,53 +1,34 @@
 import React from 'react';
-import {
-   IntroSection,
-   ProjectSection,
-   ProjectContainer,
-   Container,
-   Images,
-   Information,
-} from './ProjectsStyles';
+import { Intro, GridContainer, Container, Project, GridWrapper } from './ProjectsStyles';
 
 const Projects = () => {
    return (
       <Container>
-         <IntroSection>
-            <div>
-               <h1>Welcome to My Projects</h1>
-               <p>
-                  A collection of live and video demos, showcasing my different projects
-                  and skills
-               </p>
-            </div>
-         </IntroSection>
-         <ProjectSection>
-            <ProjectContainer>
-               <Images>
-                  <img src='./images/projects/pj1.png' alt='Project 1' title='Project Image' />
-               </Images>
-               <Information>
-                  <span>Project 1</span>
-               </Information>
-            </ProjectContainer>
-
-            <ProjectContainer>
-               <Images>
-               <img src='./images/projects/pj0.png' alt='Project 1' title='Project Image' />
-               </Images>
-               <Information>
-                  <span>Project 2</span>
-               </Information>
-            </ProjectContainer>
-
-            <ProjectContainer>
-               <Images>
-               <img src='./images/projects/pj8.png' alt='Project 1' title='Project Image' />
-               </Images>
-               <Information>
-                  <span>Project 3</span>
-               </Information>
-            </ProjectContainer>
-         </ProjectSection>
+         <Intro>
+            <h1>Featured Projects</h1>
+         </Intro>
+         <GridWrapper>
+            <GridContainer>
+               <Project id='project-0'>
+                  <span className='project-title'>Optical Character Recognition</span>
+               </Project>
+               <Project id='project-1'>
+                  <span className='project-title'>Shanes.chat</span>
+               </Project>
+               <Project id='project-2'>
+                  <span className='project-title'>AI Learns to Drive</span>
+               </Project>
+               <Project id='project-3'>
+                  <span className='project-title'>Chess</span>
+               </Project>
+               <Project id='project-4'>
+                  <span className='project-title'>3D Rendering Engine</span>
+               </Project>
+               <Project id='project-5'>
+                  <span className='project-title'>Spotify Tracker</span>
+               </Project>
+            </GridContainer>
+         </GridWrapper>
       </Container>
    );
 };
