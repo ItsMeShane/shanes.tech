@@ -71,17 +71,17 @@ export default function NavBar() {
    );
 }
 
-function CustomLink({ to, children, onClick, ...props }) {
-   const resolvedPath = useResolvedPath(to);
-   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-   return (
-      <li className={isActive ? 'active' : ''}>
-         <Link to={to} onClick={onClick} {...props}>
-            {children}
-         </Link>
-      </li>
-   );
-}
+// function CustomLink({ to, children, onClick, ...props }) {
+//    const resolvedPath = useResolvedPath(to);
+//    const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+//    return (
+//       <li className={isActive ? 'active' : ''}>
+//          <Link to={to} onClick={onClick} {...props}>
+//             {children}
+//          </Link>
+//       </li>
+//    );
+// }
 
 export const goToSection = (event, targetId) => {
    event.preventDefault();
