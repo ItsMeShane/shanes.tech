@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './NavStyles.css';
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
    const navbarLinksRef = useRef(null);
