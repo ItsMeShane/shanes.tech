@@ -38,71 +38,60 @@ export const GridContainer = styled.div`
 `;
 
 export const Project = styled.div`
+   cursor: pointer;
    width: 100%;
    height: 100%;
    border-radius: 1rem;
    background-size: cover;
    background-position: center;
-   transition: filter 0.5s ease-out;
-
+   transition: filter 0.5s ease-out, transform 0.5s ease-out;
    display: flex;
-
-   .blur {
-      filter: blur(2px);
-      background-color: #333333aa;
+   filter: brightness(95%);
+   &:hover {
+      filter: brightness(110%);
+      transform: scale(1.025);
    }
+
    .project-title {
       font-size: 2em;
       height: fit-content;
       align-self: flex-end;
       margin: 5px;
-
       padding: 0 5px;
-
       color: #eee;
       -webkit-text-stroke: 1px #111;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
       font-weight: 700;
    }
 
-   filter: grayscale(60%) brightness(80%);
-   &:hover {
-      filter: grayscale(0%) brightness(120%);
-   }
    &#project-0 {
-      background-color: #dcb7d8;
       grid-row: 1 / 2;
       grid-column: 1 / 3;
-      background-image: url('./images/projects/pj0.png');
+      background-image: url('./images/projects/OCR.png');
    }
    &#project-1 {
-      background-color: #75b5ea;
       grid-row: 1 / 3;
       grid-column: 3 / 4;
-      background-image: url('./images/projects/pj1.png');
+      background-image: url('./images/projects/shanes-chat.png');
    }
    &#project-2 {
-      background-color: #f799db;
       grid-row: 2 / 4;
       grid-column: 1 / 3;
-      background-image: url('./images/projects/pj2.png');
+      background-image: url('./images/projects/ai-learns-to-drive.png');
    }
    &#project-3 {
-      background-color: #59567a;
       grid-row: 4 / 6;
       grid-column: 1 / 2;
-      background-image: url('./images/projects/pj6.png');
+      background-image: url('./images/projects/chess.png');
    }
    &#project-4 {
-      background-color: #775ca8;
       grid-row: 4 / 6;
       grid-column: 2 / 4;
-      background-image: url('./images/projects/pj8.png');
+      background-image: url('./images/projects/engine-3d.png');
    }
    &#project-5 {
-      background-color: #989bec;
       grid-row: 3 / 4;
       grid-column: 3 / 4;
-      background-image: url('./images/projects/pj5.png');
+      background-image: url('./images/projects/spotify-tracker.png');
    }
 `;
