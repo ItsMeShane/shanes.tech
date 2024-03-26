@@ -21,20 +21,42 @@ export const Intro = styled.div`
       font-size: 4.5rem;
       font-weight: 800;
       padding-bottom: 50px;
+      @media (max-width: 768px) {
+         font-size: 3rem;
+      }
    }
 `;
 
 export const GridWrapper = styled.div`
    height: 100vh;
-   width: 100vh;
+   width: 100vw;
+   max-width: 1280px;
+   display: flex;
+   justify-content: center;
+   @media (max-width: 1000px) {
+      height: 140vh;
+   }
+   @media (max-width: 768px), (max-height: 500px) {
+      height: 140vh;
+   }
 `;
 
 export const GridContainer = styled.div`
    display: grid;
-   grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
    gap: 30px;
    height: 100%;
-   width: 100%;
+   width: 80%;
+   @media (max-width: 1000px) {
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+   }
+   @media (max-width: 768px), (max-height: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
 `;
 
 export const Project = styled.div`
@@ -62,36 +84,64 @@ export const Project = styled.div`
       -webkit-text-stroke: 1px #111;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
       font-weight: 700;
+      @media (max-width: 768px) {
+         align-self: flex-start;
+         font-size: 1.8rem;
+      }
    }
 
    &#project-0 {
       grid-row: 1 / 2;
       grid-column: 1 / 3;
       background-image: url('./images/projects/OCR.png');
+      @media (max-width: 1000px) {
+         grid-row: 1 / 2;
+         grid-column: 1 / 3;
+      }
    }
    &#project-1 {
       grid-row: 1 / 3;
       grid-column: 3 / 4;
       background-image: url('./images/projects/shanes-chat.png');
+      @media (max-width: 1000px) {
+         grid-row: 2 / 4;
+         grid-column: 1 / 2;
+      }
    }
    &#project-2 {
       grid-row: 2 / 4;
       grid-column: 1 / 3;
       background-image: url('./images/projects/ai-learns-to-drive.png');
+      @media (max-width: 1000px) {
+         grid-row: 2 / 4;
+         grid-column: 2 / 3;
+      }
    }
    &#project-3 {
       grid-row: 4 / 6;
       grid-column: 1 / 2;
       background-image: url('./images/projects/chess.png');
+      @media (max-width: 1000px) {
+         grid-row: 5 / 7;
+         grid-column: 1 / 2;
+      }
    }
    &#project-4 {
       grid-row: 4 / 6;
       grid-column: 2 / 4;
       background-image: url('./images/projects/engine-3d.png');
+      @media (max-width: 1000px) {
+         grid-row: 4 / 5;
+         grid-column: 1 / 3;
+      }
    }
    &#project-5 {
       grid-row: 3 / 4;
       grid-column: 3 / 4;
       background-image: url('./images/projects/spotify-tracker.png');
+      @media (max-width: 1000px) {
+         grid-row: 5 / 7;
+         grid-column: 2 / 3;
+      }
    }
 `;
