@@ -60,7 +60,7 @@ export const GridContainer = styled.div`
 `;
 
 export const Project = styled.div`
-   cursor: pointer;
+   /* cursor: pointer; */
    width: 100%;
    height: 100%;
    border-radius: 1rem;
@@ -84,10 +84,17 @@ export const Project = styled.div`
       -webkit-text-stroke: 1px #111;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
       font-weight: 700;
+      z-index:1;
       @media (max-width: 768px) {
          align-self: flex-start;
          font-size: 1.8rem;
       }
+   }
+   .link-blanket {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
    }
 
    &#project-0 {
