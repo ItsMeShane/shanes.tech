@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContainer, PageWrapper } from './ProjectPageStyles';
 
-const PJ_3DEngine = () => {
+const PJ3DEngine = () => {
    return (
       <PageWrapper>
          <PageContainer>
@@ -11,4 +11,4 @@ const PJ_3DEngine = () => {
    );
 };
 
-export default PJ_3DEngine;
+export default PJ3DEngine;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContainer, PageWrapper } from './ProjectPageStyles';
 
-const AILearnsToDrive = () => {
+const PJAILearnsToDrive = () => {
    return (
       <PageWrapper>
          <PageContainer>
@@ -11,4 +11,4 @@ const AILearnsToDrive = () => {
    );
 };
 
-export default AILearnsToDrive;
+export default PJAILearnsToDrive;

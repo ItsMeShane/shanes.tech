@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContainer, PageWrapper } from './ProjectPageStyles';
 
-const PJ_Chess = () => {
+const PJChess = () => {
    return (
       <PageWrapper>
          <PageContainer>
@@ -11,4 +11,4 @@ const PJ_Chess = () => {
    );
 };
 
-export default PJ_Chess;
+export default PJChess;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContainer, PageWrapper } from './ProjectPageStyles';
 
-const PJ_SpotifyTracker = () => {
+const PJSpotifyTracker = () => {
    return (
       <PageWrapper>
          <PageContainer>
@@ -11,4 +11,4 @@ const PJ_SpotifyTracker = () => {
    );
 };
 
-export default PJ_SpotifyTracker;
+export default PJSpotifyTracker;

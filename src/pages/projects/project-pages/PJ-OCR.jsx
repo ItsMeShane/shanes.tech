@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContainer, PageWrapper } from './ProjectPageStyles';
 
-const PJ_OCR = () => {
+const PJOpticalCharacterRecognition = () => {
    return (
       <PageWrapper>
          <PageContainer>
@@ -11,4 +11,4 @@ const PJ_OCR = () => {
    );
 };
 
-export default PJ_OCR;
+export default PJOpticalCharacterRecognition;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContainer, PageWrapper } from './ProjectPageStyles';
 
-const PJ_ShanesChat = () => {
+const PJShanesChat = () => {
    return (
       <PageWrapper>
          <PageContainer>
@@ -11,4 +11,4 @@ const PJ_ShanesChat = () => {
    );
 };
 
-export default PJ_ShanesChat;
+export default PJShanesChat;

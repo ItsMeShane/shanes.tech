@@ -4,12 +4,12 @@ import Experience from './pages/experience/Experience';
 import PageNotFound from './pages/error404/PageNotFound';
 import NavBar from './navigation/Navigation';
 import Projects from './pages/projects/Projects';
-import PJ_ShanesChat from './pages/projects/project-pages/PJ-ShanesChat';
-import AILearnsToDrive from './pages/projects/project-pages/PJ-AILearnsToDrive';
-import PJ_Chess from './pages/projects/project-pages/PJ-Chess';
-import PJ_3DEngine from './pages/projects/project-pages/PJ-3DEngine';
-import PJ_SpotifyTracker from './pages/projects/project-pages/PJ-SpotifyTracker';
-import PJ_OCR from './pages/projects/project-pages/PJ-OCR';
+import PJShanesChat from './pages/projects/project-pages/PJ-ShanesChat';
+import PJAILearnsToDrive from './pages/projects/project-pages/PJ-AILearnsToDrive';
+import PJChess from './pages/projects/project-pages/PJ-Chess';
+import PJ3DEngine from './pages/projects/project-pages/PJ-3DEngine';
+import PJSpotifyTracker from './pages/projects/project-pages/PJ-SpotifyTracker';
+import PJOpticalCharacterRecognition from './pages/projects/project-pages/PJ-OCR';
 
 const PortfolioContent = () => {
    return (
@@ -36,12 +36,12 @@ function App() {
             <Route path='*' element={<PageNotFound />} />
             <Route path='/' index element={<PortfolioContent />} />
             <Route path='/home' element={<PortfolioContent />} />
-            <Route path='/projects/optical-character-recognition' element={<PJ_OCR />} />
-            <Route path='/projects/shanes-chat' element={<PJ_ShanesChat />} />
-            <Route path='/projects/ai-learns-to-drive' element={<AILearnsToDrive />} />
-            <Route path='/projects/chess' element={<PJ_Chess />} />
-            <Route path='/projects/3d-rendering-engine' element={<PJ_3DEngine />} />
-            <Route path='/projects/spotify-tracker' element={<PJ_SpotifyTracker />} />
+            <Route path='/projects/optical-character-recognition' element={<PJOpticalCharacterRecognition />} />
+            <Route path='/projects/shanes-chat' element={<PJShanesChat />} />
+            <Route path='/projects/ai-learns-to-drive' element={<PJAILearnsToDrive />} />
+            <Route path='/projects/chess' element={<PJChess />} />
+            <Route path='/projects/3d-rendering-engine' element={<PJ3DEngine />} />
+            <Route path='/projects/spotify-tracker' element={<PJSpotifyTracker />} />
          </Routes>
       </BrowserRouter>
    );
