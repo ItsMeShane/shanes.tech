@@ -60,10 +60,9 @@ export const GridContainer = styled.div`
 `;
 
 export const Project = styled.div`
-   /* cursor: pointer; */
    width: 100%;
    height: 100%;
-   border-radius: 1rem;
+   border-radius: 5px;
    background-size: cover;
    background-position: center;
    transition: filter 0.5s ease-out, transform 0.5s ease-out;
@@ -109,7 +108,7 @@ export const Project = styled.div`
    &#project-1 {
       grid-row: 1 / 3;
       grid-column: 3 / 4;
-      background-image: url('./images/projects/shanes-chat.png');
+      background-image: url('./images/projects/shanes-chat/shanes-chat.png');
       @media (max-width: 1000px) {
          grid-row: 2 / 4;
          grid-column: 1 / 2;
