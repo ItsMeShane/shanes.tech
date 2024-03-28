@@ -119,6 +119,7 @@ export const Tags = styled.div`
 `;
 
 export const Body = styled.div`
+   width: 100%;
    max-width: 900px;
    padding: 30px;
    background-color: #333;
@@ -141,12 +142,19 @@ export const BodyTitle = styled.span`
    }
 `;
 
-export const CodeSnippet = styled.code`
-   font-family: monospace;
-   /* font-size: 14px; */
+export const CodeContainer = styled.div`
+   align-self: center;
    background-color: #555;
    padding: 10px;
    border-radius: 4px;
    border: 1px solid #ccc;
-   white-space: pre-wrap;
+   width: 90%;
+   height: fit-content;
+   display: flex;
+   img {
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+   }
 `;

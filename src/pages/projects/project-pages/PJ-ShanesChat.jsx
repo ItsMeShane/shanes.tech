@@ -12,7 +12,7 @@ import {
    HeaderTitle,
    TitleContainer,
    BodyTitle,
-   CodeSnippet,
+   CodeContainer,
 } from './ProjectPageStyles';
 
 const PJShanesChat = () => {
@@ -63,60 +63,27 @@ const PJShanesChat = () => {
             <Body>
                <BodyTitle>Some Code Analysis</BodyTitle>
                <p>
-                  An alternative portfolio experience. This website showcases my projects
-                  and skills through the lense of an iPhone. An alternative portfolio
-                  experience. This website showcases my projects and skills through the
-                  lense of an iPhone. An alternative portfolio experience. This website
-                  showcases my projects and skills through the lense of an iPhone. An
-                  alternative portfolio experience. This website showcases my projects and
-                  skills through the lense of an iPhone. An alternative portfolio
-                  experience. This website showcases my projects and skills through the
-                  lense of an iPhone. An alternative portfolio experience.
+                  One of the more interesting aspects of this project is my use of an
+                  assistant chatbot; trained on my own personal data, my assistant can
+                  help users navigate the website and answer any questions about me.
+                  Seeing the rise and hype around LLMs such as Gemini, Copilot, and
+                  ChatGPT is what initially inspired me to start this project. With that
+                  said, I'd like to share with you my assistant chatbot implementation
+                  using OpenAI's Assistant API.
                </p>
-               <CodeSnippet>
-                  {`
-      const sendMessageToAssistant = async (threadId, text) => {
-         try {
-            await openai.beta.threads.messages.create(threadId, {
-               role: 'user',
-               content: text,
-            });
-            const run = await openai.beta.threads.runs.create(threadId, {
-               assistant_id: process.env.REACT_APP_OPENAI_ASSISTANT_ID,
-            });
-      
-            let runStatus = await openai.beta.threads.runs.retrieve(threadId, run.id);
-            while (runStatus.status !== 'completed') {
-               await new Promise((resolve) => setTimeout(resolve, 1000));
-               runStatus = await openai.beta.threads.runs.retrieve(threadId, run.id);
-            }
-      
-            const assistantResponse = (
-               await openai.beta.threads.messages.list(threadId)
-            ).data.find((message) => message.role === 'assistant');
-      
-            let assistantMessage = assistantResponse.content[0].text.value;
-      
-            return assistantMessage;
-         } catch (error) {
-            console.error(error);
-            console.error('Failed to send message to OpenAI');
-            return '';
-         }
-      };
- `}
-               </CodeSnippet>
-               <p>
-                  An alternative portfolio experience. This website showcases my projects
-                  and skills through the lense of an iPhone. An alternative portfolio
-                  experience. This website showcases my projects and skills through the
-                  lense of an iPhone. An alternative portfolio experience. This website
-                  showcases my projects and skills through the lense of an iPhone. An
-                  alternative portfolio experience. This website showcases my projects and
-                  skills through the lense of an iPhone. An alternative portfolio
-                  experience. This website showcases my projects and skills through the
-                  lense of an iPhone. An alternative portfolio experience.
-               </p>
+               <CodeContainer>
+                  <img src='/images/projects/shanes-chat/code1.png' />
+               </CodeContainer>
+               <CodeContainer>
+                  <img src='/images/projects/shanes-chat/code2.png' />
+               </CodeContainer>
+               <CodeContainer>
+                  <img src='/images/projects/shanes-chat/code3.png' />
+               </CodeContainer>
+               <CodeContainer>
+                  <img src='/images/projects/shanes-chat/code4.png' />
+               </CodeContainer>
+               <p></p>
             </Body>
          </PageContainer>
       </PageWrapper>
