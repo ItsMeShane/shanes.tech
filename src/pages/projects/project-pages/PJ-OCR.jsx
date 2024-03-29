@@ -46,7 +46,7 @@ const PJOpticalCharacterRecognition = () => {
                   </TitleContainer>
                   <Description>
                      Convert images to text with OCR. Upload (or take) a photo that
-                     contains text and see the image get transcribed to text.
+                     contains a message and see the image get transcribed to text.
                   </Description>
                   <Tags>
                      <span style={{ '--background': '#3924ad' }}>Love</span>

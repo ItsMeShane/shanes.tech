@@ -28,16 +28,16 @@ export const Intro = styled.div`
 `;
 
 export const GridWrapper = styled.div`
-   height: 100vh;
+   height: 1080px;
    width: 100vw;
    max-width: 1280px;
    display: flex;
    justify-content: center;
    @media (max-width: 1000px) {
-      height: 140vh;
+      height: 1512px;
    }
    @media (max-width: 768px), (max-height: 500px) {
-      height: 140vh;
+      height: 1512px;
    }
 `;
 

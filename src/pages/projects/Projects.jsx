@@ -16,7 +16,7 @@ const Projects = () => {
                </Project>
                <Project id='project-1'>
                   <Link to='projects/shanes-chat' className='link-blanket' />
-                  <span className='project-title'>Shanes.chat</span>
+                  <span className='project-title'>Shanes Chat</span>
                </Project>
                <Project id='project-2'>
                   <Link to='projects/ai-learns-to-drive' className='link-blanket' />
