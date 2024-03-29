@@ -58,6 +58,7 @@ const PJShanesChat = () => {
                <ShowcasedImage
                   src='/images/projects/shanes-chat/shanes-chat-transparent.png'
                   width='275px'
+                  alt='shanes chat'
                />
             </Header>
             <Body>
@@ -72,16 +73,16 @@ const PJShanesChat = () => {
                   using OpenAI's Assistant API.
                </p>
                <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code1.png' />
+                  <img src='/images/projects/shanes-chat/code1.png' alt='code snippet' />
                </CodeContainer>
                <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code2.png' />
+                  <img src='/images/projects/shanes-chat/code2.png' alt='code snippet' />
                </CodeContainer>
                <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code3.png' />
+                  <img src='/images/projects/shanes-chat/code3.png' alt='code snippet' />
                </CodeContainer>
                <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code4.png' />
+                  <img src='/images/projects/shanes-chat/code4.png' alt='code snippet' />
                </CodeContainer>
                <p></p>
             </Body>

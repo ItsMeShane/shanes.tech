@@ -56,7 +56,11 @@ const PJSpotifyTracker = () => {
                   </Tags>
                </InfoSection>
 
-               <ShowcasedImage src='/images/placeholder.png' width='400px' />
+               <ShowcasedImage
+                  src='/images/placeholder.png'
+                  alt='placeholder'
+                  width='400px'
+               />
             </Header>
             <Body>
                <BodyTitle>Some Code Analysis</BodyTitle>
@@ -67,7 +71,7 @@ const PJSpotifyTracker = () => {
                </p>
                <p>More posts coming soon!</p>
                <CodeContainer>
-                  <img src='/images/placeholder.png' />
+                  <img src='/images/placeholder.png' alt='placeholder' />
                </CodeContainer>
             </Body>
          </PageContainer>

@@ -56,7 +56,11 @@ const PJ3DEngine = () => {
                   </Tags>
                </InfoSection>
 
-               <ShowcasedImage src='/images/placeholder.png' width='400px' />
+               <ShowcasedImage
+                  src='/images/placeholder.png'
+                  alt='placeholder'
+                  width='400px'
+               />
             </Header>
             <Body>
                <BodyTitle>Some Code Analysis</BodyTitle>
@@ -67,7 +71,7 @@ const PJ3DEngine = () => {
                </p>
                <p>More posts coming soon!</p>
                <CodeContainer>
-                  <img src='/images/placeholder.png' />
+                  <img src='/images/placeholder.png' alt='placeholder' />
                </CodeContainer>
             </Body>
          </PageContainer>

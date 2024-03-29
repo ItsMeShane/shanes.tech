@@ -54,7 +54,11 @@ const PJChess = () => {
                   </Tags>
                </InfoSection>
 
-               <ShowcasedImage src='/images/projects/chess/chess2.png' width='400px' />
+               <ShowcasedImage
+                  src='/images/projects/chess/chess2.png'
+                  width='400px'
+                  alt='chess'
+               />
             </Header>
             <Body>
                <BodyTitle>Some Code Analysis</BodyTitle>
@@ -69,7 +73,7 @@ const PJChess = () => {
                   for the purpose of presentation.
                </p>
                <CodeContainer>
-                  <img src='/images/projects/chess/code1.png' />
+                  <img src='/images/projects/chess/code1.png' alt='code snippet' />
                </CodeContainer>
                <p>Let's break this code down piece by piece. </p>
             </Body>
