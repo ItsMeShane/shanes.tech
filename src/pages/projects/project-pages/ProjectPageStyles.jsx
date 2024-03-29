@@ -32,6 +32,9 @@ export const InfoSection = styled.div`
    flex-shrink: 0;
    display: flex;
    flex-direction: column;
+   @media (max-width: 768px) {
+      padding: 0 10px;
+   }
 `;
 export const TitleContainer = styled.div`
    display: flex;
@@ -48,6 +51,9 @@ export const HeaderTitle = styled.span`
    font-weight: 600;
    -webkit-text-stroke: 2px #111;
    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+   max-width: 500px;
+   line-height:1.25;
+   padding-bottom:10px;
    @media (max-width: 768px) {
       font-size: 3rem;
       font-weight: 600;
@@ -100,7 +106,7 @@ export const Tags = styled.div`
    gap: 5px;
    border: 2px solid #eee;
    border-radius: 0.5rem;
-   padding: 25px;
+   padding: 25px 20px;
    span {
       background-color: var(--background);
       padding: 5px 15px;
