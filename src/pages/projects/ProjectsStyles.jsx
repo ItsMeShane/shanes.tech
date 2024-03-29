@@ -126,7 +126,7 @@ export const Project = styled.div`
    &#project-3 {
       grid-row: 4 / 6;
       grid-column: 1 / 2;
-      background-image: url('./images/projects/chess.png');
+      background-image: url('./images/projects/chess/chess-logo.png');
       @media (max-width: 1000px) {
          grid-row: 5 / 7;
          grid-column: 1 / 2;
