@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Hero from './pages/hero/Hero';
-import Experience from './pages/experience/Experience';
+import Assistant from './pages/assistant/Assistant';
 import PageNotFound from './pages/error404/PageNotFound';
 import NavBar from './navigation/Navigation';
 import Projects from './pages/projects/Projects';
@@ -17,14 +17,12 @@ const PortfolioContent = () => {
          <div id='hero'>
             <Hero />
          </div>
-         <div id='chat'></div>
          <div id='projects'>
             <Projects />
          </div>
-         <div id='experience'>
-            <Experience />
+         <div id='assistant'>
+            <Assistant />
          </div>
-         <div id='about'></div>
       </>
    );
 };
@@ -36,7 +34,10 @@ function App() {
             <Route path='*' element={<PageNotFound />} />
             <Route path='/' index element={<PortfolioContent />} />
             <Route path='/home' element={<PortfolioContent />} />
-            <Route path='/projects/optical-character-recognition' element={<PJOpticalCharacterRecognition />} />
+            <Route
+               path='/projects/optical-character-recognition'
+               element={<PJOpticalCharacterRecognition />}
+            />
             <Route path='/projects/shanes-chat' element={<PJShanesChat />} />
             <Route path='/projects/ai-learns-to-drive' element={<PJAILearnsToDrive />} />
             <Route path='/projects/chess' element={<PJChess />} />

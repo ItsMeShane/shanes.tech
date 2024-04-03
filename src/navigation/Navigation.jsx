@@ -43,26 +43,16 @@ export default function NavBar() {
          <div className='navbar-links' ref={navbarLinksRef}>
             <ul>
                <li>
-                  <a href='#chat' onClick={(e) => handleLinkClick(e, '#chat')}>
-                     Chat
-                  </a>
-               </li>
-               <li>
                   <a href='#projects' onClick={(e) => handleLinkClick(e, '#projects')}>
                      Projects
                   </a>
                </li>
                <li>
                   <a
-                     href='#experience'
-                     onClick={(e) => handleLinkClick(e, '#experience')}
+                     href='#assistant'
+                     onClick={(e) => handleLinkClick(e, '#assistant')}
                   >
-                     Experience
-                  </a>
-               </li>
-               <li>
-                  <a href='#about' onClick={(e) => handleLinkClick(e, '#about')}>
-                     About
+                     Assistant
                   </a>
                </li>
             </ul>

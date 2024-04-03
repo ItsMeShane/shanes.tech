@@ -186,12 +186,12 @@ const InteractiveButtons = () => {
             </a>
          </LinkWrapper>
          <LinkWrapper style={{ '--offset': '60px' }}>
-            <a href='#experience' onClick={(e) => goToSection(e, '#experience')}>
+            <a href='#assistant' onClick={(e) => goToSection(e, '#assistant')}>
                <Card
                   className='link'
                   style={{ '--clr1': '#945489', '--clr2': '#3b2237' }}
                >
-                  <span>Experience</span>
+                  <span>Assistant</span>
                   <ion-icon name='arrow-down-circle-outline'></ion-icon>{' '}
                </Card>
             </a>
