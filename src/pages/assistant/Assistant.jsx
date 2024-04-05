@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Header, Input, Messages, Wrapper } from './AssistantStyles';
+import { Container, Header, Input, Messages, Wrapper } from './AssistantStyles';
 
 const Assistant = () => {
    return (
