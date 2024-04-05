@@ -14,15 +14,15 @@ import PJOpticalCharacterRecognition from './pages/projects/project-pages/PJ-OCR
 const PortfolioContent = () => {
    return (
       <>
-         <div id='hero'>
+         <section id='hero'>
             <Hero />
-         </div>
-         <div id='projects'>
+         </section>
+         <section id='projects'>
             <Projects />
-         </div>
-         <div id='assistant'>
+         </section>
+         <section id='assistant'>
             <Assistant />
-         </div>
+         </section>
       </>
    );
 };
