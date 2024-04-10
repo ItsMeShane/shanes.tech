@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Hero from './pages/hero/Hero';
 import Assistant from './pages/assistant/Assistant';
 import PageNotFound from './pages/error404/PageNotFound';
@@ -28,7 +28,7 @@ const PortfolioContent = () => {
 };
 function App() {
    return (
-      <BrowserRouter>
+      <HashRouter>
          <NavBar />
          <Routes>
             <Route path='*' element={<PageNotFound />} />
@@ -44,7 +44,7 @@ function App() {
             <Route path='/projects/3d-rendering-engine' element={<PJ3DEngine />} />
             <Route path='/projects/spotify-tracker' element={<PJSpotifyTracker />} />
          </Routes>
-      </BrowserRouter>
+      </HashRouter>
    );
 }
 
