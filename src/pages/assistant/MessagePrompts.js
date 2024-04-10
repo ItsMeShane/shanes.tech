@@ -17,7 +17,7 @@ const MessagePrompts = [
 
 let msgIndex = 0;
 export default function getNextMessage() {
-   if (msgIndex == MessagePrompts.length) {
+   if (msgIndex === MessagePrompts.length) {
       msgIndex = 0;
    }
    return MessagePrompts[msgIndex++];
