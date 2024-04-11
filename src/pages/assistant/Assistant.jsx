@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Header, Input, InputButton, Messages, Wrapper } from './AssistantStyles';
+import {
+   Container,
+   Header,
+   Input,
+   InputButton,
+   Messages,
+   Wrapper,
+} from './AssistantStyles';
 import { Intro } from '../projects/ProjectsStyles';
 import { createThread, loadMessages, sendMessageToAssistant } from './OpenAIAssistant';
 import starterMessages from './OpenAIAssistant';
@@ -34,9 +41,12 @@ const Assistant = () => {
    }, []);
 
    // auto scroll to bottom
-   const messagesEndRef = useRef(null);
+   const messagesRef = useRef(null);
    useEffect(() => {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesRef.current.scroll({
+         top: messagesRef.current.scrollHeight,
+         behavior: 'smooth',
+      });
    }, [messageList, isTypeing]);
 
    // shift + enter adds line
@@ -115,7 +125,7 @@ const Assistant = () => {
                   <ion-icon name='refresh-outline'></ion-icon>{' '}
                </button>
             </Header>
-            <Messages>
+            <Messages ref={messagesRef}>
                {messageList.map((message, index) => (
                   <span
                      key={index}
@@ -124,8 +134,7 @@ const Assistant = () => {
                      {message.text}
                   </span>
                ))}
-               {isTypeing && <TypeingMessage ref={messagesEndRef} />}
-               <div ref={messagesEndRef} />
+               {isTypeing && <TypeingMessage />}
             </Messages>
             <Input>
                <textarea
