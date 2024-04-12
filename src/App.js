@@ -3,6 +3,7 @@ import Hero from './pages/hero/Hero';
 import Assistant from './pages/assistant/Assistant';
 import PageNotFound from './pages/error404/PageNotFound';
 import NavBar from './navigation/Navigation';
+import Footer from './footer/Footer';
 import Projects from './pages/projects/Projects';
 import PJShanesChat from './pages/projects/project-pages/PJ-ShanesChat';
 import PJAILearnsToDrive from './pages/projects/project-pages/PJ-AILearnsToDrive';
@@ -44,6 +45,7 @@ function App() {
             <Route path='/projects/3d-rendering-engine' element={<PJ3DEngine />} />
             <Route path='/projects/spotify-tracker' element={<PJSpotifyTracker />} />
          </Routes>
+         <Footer />
       </BrowserRouter>
    );
 }
