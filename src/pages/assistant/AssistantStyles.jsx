@@ -105,10 +105,14 @@ export const Input = styled.div`
       flex: 1;
       min-width: 0;
       resize: none;
-      padding: 0px 20px;
+      padding: 0px 10px;
       outline: none;
       border: 1px #222 solid;
-      border-radius:5px;
+      border-radius: 5px;
+
+      &::placeholder {
+         color: #2a2a2a;
+      }
 
       @media (max-width: 420px) {
          padding: 0px 5px;
