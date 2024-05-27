@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
    display: flex;
@@ -29,7 +30,7 @@ export const Intro = styled.div`
 
 export const GridWrapper = styled.div`
    height: 1080px;
-   width: 100vw;
+   width: 100%;
    max-width: 1280px;
    display: flex;
    justify-content: center;
@@ -59,7 +60,7 @@ export const GridContainer = styled.div`
    }
 `;
 
-export const Project = styled.div`
+export const ProjectLink = styled(Link)`
    width: 100%;
    height: 100%;
    border-radius: 5px;
@@ -67,6 +68,7 @@ export const Project = styled.div`
    background-position: center;
    transition: filter 0.5s ease-out, transform 0.5s ease-out;
    display: flex;
+   text-decoration: none;
    filter: brightness(95%);
    &:hover {
       filter: brightness(110%);
@@ -83,17 +85,11 @@ export const Project = styled.div`
       -webkit-text-stroke: 1px #111;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
       font-weight: 700;
-      z-index:1;
+      z-index: 1;
       @media (max-width: 768px) {
          align-self: flex-start;
          font-size: 1.8rem;
       }
-   }
-   .link-blanket {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      border-radius: 1rem;
    }
 
    &#project-0 {
