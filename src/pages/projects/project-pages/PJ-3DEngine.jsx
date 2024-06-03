@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-   Body,
    ButtonLink,
    Description,
    Header,
@@ -11,8 +10,6 @@ import {
    Tags,
    HeaderTitle,
    TitleContainer,
-   BodyTitle,
-   CodeContainer,
 } from './ProjectPageStyles';
 
 const PJ3DEngine = () => {
@@ -26,7 +23,7 @@ const PJ3DEngine = () => {
                      <div className='button-container'>
                         <ButtonLink
                            style={{ '--background': '#549468' }}
-                           href=''
+                           href='https://drive.google.com/drive/folders/1MG5rai0nvQjz_sweQyv6sNwxut0zVaFz?usp=sharing'
                            target='_blank'
                            rel='noopener noreferrer'
                         >
@@ -35,7 +32,7 @@ const PJ3DEngine = () => {
                         </ButtonLink>
                         <ButtonLink
                            style={{ '--background': '#5e5494' }}
-                           href='https://github.com/ItsMeShane/'
+                           href='https://github.com/ItsMeShane/DEMO_3D'
                            target='_blank'
                            rel='noopener noreferrer'
                         >
@@ -57,23 +54,11 @@ const PJ3DEngine = () => {
                </InfoSection>
 
                <ShowcasedImage
-                  src='/images/placeholder.png'
-                  alt='placeholder'
-                  width='400px'
+                  src='/images/projects/engine 3d/showcase1.png' 
+                  alt='3d engine'
+                  width='600px'
                />
             </Header>
-            <Body>
-               <BodyTitle>Some Code Analysis</BodyTitle>
-               <p>This "blog" post is currently a work in progress.</p>
-               <p>
-                  I put a lot of time and effort into writing these so it takes a lot of
-                  time.
-               </p>
-               <p>More posts coming soon!</p>
-               <CodeContainer>
-                  <img src='/images/placeholder.png' alt='placeholder' />
-               </CodeContainer>
-            </Body>
          </PageContainer>
       </PageWrapper>
    );

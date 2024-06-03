@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-   Body,
    ButtonLink,
    Description,
    Header,
@@ -11,8 +10,6 @@ import {
    Tags,
    HeaderTitle,
    TitleContainer,
-   BodyTitle,
-   CodeContainer,
 } from './ProjectPageStyles';
 
 const PJAILearnsToDrive = () => {
@@ -56,23 +53,11 @@ const PJAILearnsToDrive = () => {
                </InfoSection>
 
                <ShowcasedImage
-                  src='/images/placeholder.png'
-                  alt='placeholder'
-                  width='400px'
+                  src='/images/projects/ai learns to drive/showcase1.png' 
+                  alt='ai learns to drive'
+                  width='250px'
                />
             </Header>
-            <Body>
-               <BodyTitle>Some Code Analysis</BodyTitle>
-               <p>This "blog" post is currently a work in progress.</p>
-               <p>
-                  I put a lot of time and effort into writing these so it takes a lot of
-                  time.
-               </p>
-               <p>More posts coming soon!</p>
-               <CodeContainer>
-                  <img src='/images/placeholder.png' alt='placeholder' />
-               </CodeContainer>
-            </Body>
          </PageContainer>
       </PageWrapper>
    );

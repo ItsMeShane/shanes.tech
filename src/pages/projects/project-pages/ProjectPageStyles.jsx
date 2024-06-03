@@ -136,6 +136,9 @@ export const Body = styled.div`
       font-size: 1rem;
       /* line-height:1.5rem; */
    }
+
+   /////////
+   display:none;
 `;
 
 export const BodyTitle = styled.span`

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-   Body,
    ButtonLink,
    Description,
    Header,
@@ -11,8 +10,6 @@ import {
    Tags,
    HeaderTitle,
    TitleContainer,
-   BodyTitle,
-   CodeContainer,
 } from './ProjectPageStyles';
 
 const PJChess = () => {
@@ -26,7 +23,7 @@ const PJChess = () => {
                      <div className='button-container'>
                         <ButtonLink
                            style={{ '--background': '#549468' }}
-                           href=''
+                           href='https://drive.google.com/drive/folders/1pVmdou1kw2y4AhkqtpiVMmmTOnrkGcHR?usp=sharing'
                            target='_blank'
                            rel='noopener noreferrer'
                         >
@@ -55,28 +52,11 @@ const PJChess = () => {
                </InfoSection>
 
                <ShowcasedImage
-                  src='/images/projects/chess/chess2.png'
-                  width='400px'
+                  src='/images/projects/chess/showcase1.png'
+                  width='450px'
                   alt='chess'
                />
             </Header>
-            <Body>
-               <BodyTitle>Some Code Analysis</BodyTitle>
-               <p>
-                  One of my favorite parts about chess programming is the use of the
-                  Mini-Max algorithm with Alpha Beta Pruning. These alorithms work great
-                  in two-player turn-based games like chess, checkers, and tic-tac-toe.
-               </p>
-               <p>
-                  Below you can see a variation of these algorithms used together to
-                  create our search algorithm. Note that this is a stripped down version
-                  for the purpose of presentation.
-               </p>
-               <CodeContainer>
-                  <img src='/images/projects/chess/code1.png' alt='code snippet' />
-               </CodeContainer>
-               <p>Let's break this code down piece by piece. </p>
-            </Body>
          </PageContainer>
       </PageWrapper>
    );

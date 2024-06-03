@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-   Body,
    ButtonLink,
    Description,
    Header,
@@ -11,8 +10,6 @@ import {
    Tags,
    HeaderTitle,
    TitleContainer,
-   BodyTitle,
-   CodeContainer,
 } from './ProjectPageStyles';
 
 const PJShanesChat = () => {
@@ -50,42 +47,17 @@ const PJShanesChat = () => {
                   </Description>
                   <Tags>
                      <span style={{ '--background': '#3924ad' }}>React.js</span>
-                     <span style={{ '--background': '#21719d' }}>OpenAI</span>
+                     <span style={{ '--background': '#21719d' }}>GPT-4</span>
                      <span style={{ '--background': '#1c744f' }}>Styled Components</span>
                   </Tags>
                </InfoSection>
 
                <ShowcasedImage
-                  src='/images/projects/shanes-chat/shanes-chat-transparent.png'
+                  src='/images/projects/shanes chat/showcase1.png'
                   width='275px'
                   alt='shanes chat'
                />
             </Header>
-            <Body>
-               <BodyTitle>Some Code Analysis</BodyTitle>
-               <p>
-                  One of the more interesting aspects of this project is my use of an
-                  assistant chatbot; trained on my own personal data, my assistant can
-                  help users navigate the website and answer any questions about me.
-                  Seeing the rise and hype around LLMs such as Gemini, Copilot, and
-                  ChatGPT is what initially inspired me to start this project. With that
-                  said, I'd like to share with you my assistant chatbot implementation
-                  using OpenAI's Assistant API.
-               </p>
-               <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code1.png' alt='code snippet' />
-               </CodeContainer>
-               <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code2.png' alt='code snippet' />
-               </CodeContainer>
-               <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code3.png' alt='code snippet' />
-               </CodeContainer>
-               <CodeContainer>
-                  <img src='/images/projects/shanes-chat/code4.png' alt='code snippet' />
-               </CodeContainer>
-               <p></p>
-            </Body>
          </PageContainer>
       </PageWrapper>
    );

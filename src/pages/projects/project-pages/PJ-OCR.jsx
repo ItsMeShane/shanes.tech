@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-   Body,
    ButtonLink,
    Description,
    Header,
@@ -11,8 +10,6 @@ import {
    Tags,
    HeaderTitle,
    TitleContainer,
-   BodyTitle,
-   CodeContainer,
 } from './ProjectPageStyles';
 
 const PJOpticalCharacterRecognition = () => {
@@ -24,7 +21,7 @@ const PJOpticalCharacterRecognition = () => {
                   <TitleContainer>
                      <HeaderTitle>Optical Character Recognition</HeaderTitle>
                      <div className='button-container'>
-                        <ButtonLink
+                        {/* <ButtonLink
                            style={{ '--background': '#549468' }}
                            href=''
                            target='_blank'
@@ -32,7 +29,7 @@ const PJOpticalCharacterRecognition = () => {
                         >
                            <span>Link to Demo</span>
                            <ion-icon name='open-outline'></ion-icon>
-                        </ButtonLink>
+                        </ButtonLink> */}
                         <ButtonLink
                            style={{ '--background': '#5e5494' }}
                            href='https://github.com/ItsMeShane/'
@@ -46,33 +43,21 @@ const PJOpticalCharacterRecognition = () => {
                   </TitleContainer>
                   <Description>
                      Convert images to text with OCR. Upload (or take) a photo that
-                     contains a message and see the image get transcribed to text.
+                     contains a message and see the image get transcribed to text with 98%
+                     accuracy.
                   </Description>
                   <Tags>
-                     <span style={{ '--background': '#3924ad' }}>Love</span>
-                     <span style={{ '--background': '#9d2195' }}>Care</span>
-                     <span style={{ '--background': '#21809d' }}>Affection</span>
+                     <span style={{ '--background': '#3924ad' }}>Python</span>
+                     <span style={{ '--background': '#9d2195' }}>Numpy</span>
                   </Tags>
                </InfoSection>
 
                <ShowcasedImage
-                  src='/images/placeholder.png'
-                  alt='placeholder'
+                  src='/images/projects/optical character recognition/showcase1.png'
+                  alt='optical character recognition'
                   width='400px'
                />
             </Header>
-            <Body>
-               <BodyTitle>Some Code Analysis</BodyTitle>
-               <p>This "blog" post is currently a work in progress.</p>
-               <p>
-                  I put a lot of time and effort into writing these so it takes a lot of
-                  time.
-               </p>
-               <p>More posts coming soon!</p>
-               <CodeContainer>
-                  <img src='/images/placeholder.png' alt='placeholder' />
-               </CodeContainer>
-            </Body>
          </PageContainer>
       </PageWrapper>
    );

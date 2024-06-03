@@ -95,7 +95,7 @@ export const ProjectLink = styled(Link)`
    &#project-0 {
       grid-row: 1 / 2;
       grid-column: 1 / 3;
-      background-image: url('./images/projects/OCR.png');
+      background-image: url('./images/projects/optical character recognition/logo.png');
       @media (max-width: 1000px) {
          grid-row: 1 / 2;
          grid-column: 1 / 3;
@@ -104,7 +104,7 @@ export const ProjectLink = styled(Link)`
    &#project-1 {
       grid-row: 1 / 3;
       grid-column: 3 / 4;
-      background-image: url('./images/projects/shanes-chat/shanes-chat.png');
+      background-image: url('./images/projects/shanes chat/logo.png');
       @media (max-width: 1000px) {
          grid-row: 2 / 4;
          grid-column: 1 / 2;
@@ -113,7 +113,7 @@ export const ProjectLink = styled(Link)`
    &#project-2 {
       grid-row: 2 / 4;
       grid-column: 1 / 3;
-      background-image: url('./images/projects/ai-learns-to-drive.png');
+      background-image: url('./images/projects/ai learns to drive/logo.png');
       @media (max-width: 1000px) {
          grid-row: 2 / 4;
          grid-column: 2 / 3;
@@ -122,7 +122,7 @@ export const ProjectLink = styled(Link)`
    &#project-3 {
       grid-row: 4 / 6;
       grid-column: 1 / 2;
-      background-image: url('./images/projects/chess/chess-logo.png');
+      background-image: url('./images/projects/chess/logo.png');
       @media (max-width: 1000px) {
          grid-row: 5 / 7;
          grid-column: 1 / 2;
@@ -131,7 +131,7 @@ export const ProjectLink = styled(Link)`
    &#project-4 {
       grid-row: 4 / 6;
       grid-column: 2 / 4;
-      background-image: url('./images/projects/engine-3d.png');
+      background-image: url('./images/projects/engine 3d/logo.png');
       @media (max-width: 1000px) {
          grid-row: 4 / 5;
          grid-column: 1 / 3;
@@ -140,7 +140,7 @@ export const ProjectLink = styled(Link)`
    &#project-5 {
       grid-row: 3 / 4;
       grid-column: 3 / 4;
-      background-image: url('./images/projects/spotify-tracker.png');
+      background-image: url('./images/projects/spotify tracker/logo.png');
       @media (max-width: 1000px) {
          grid-row: 5 / 7;
          grid-column: 2 / 3;
