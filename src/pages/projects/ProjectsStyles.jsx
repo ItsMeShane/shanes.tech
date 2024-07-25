@@ -1,149 +1,173 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding-top: 100px;
+   gap: 50px;
+   padding: 20px;
 `;
-export const Intro = styled.div`
+export const Title = styled.span`
+   display: flex;
+   justify-content: left;
+   width:100%;
+   align-items: center;
+   text-align:left;
+   max-width: 750px;
+   user-select: none;
+   font-size: 100px;
+   color:#000;
+
+   &.mask-effect {
+      mask-image: radial-gradient(
+         circle,
+         transparent -10%,
+         black 35%,
+         black 65%,
+         transparent 100%
+      );
+      -webkit-mask-image: radial-gradient(
+         circle,
+         transparent -10%,
+         black 35%,
+         black 65%,
+         transparent 100%
+      );
+   }
+   &.center {
+      justify-content: center;
+   }
+
+   @media (max-width: 1100px) {
+      font-size: 50px;
+      text-align:center;
+      justify-content:center;
+
+      &.mask-effect {
+         mask-image: none;
+         -webkit-mask-image: none;
+      }
+   }
+`;
+
+export const ProjectContainer = styled.div`
    width: 100%;
+   height: 500px;
+   display: flex;
+   justify-content: space-evenly;
+
+   @media (max-width: 1100px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+   }
+`;
+
+export const ButtonContainer = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   color: #eee;
-   text-align: center;
-   h1 {
-      color: #555;
-      -webkit-text-stroke: 2px #111;
-      font-size: 4.5rem;
-      font-weight: 800;
-      padding-bottom: 50px;
-      @media (max-width: 768px) {
-         font-size: 3rem;
-      }
-   }
-`;
 
-export const GridWrapper = styled.div`
-   height: 1080px;
-   width: 100%;
-   max-width: 1280px;
-   display: flex;
-   justify-content: center;
-   @media (max-width: 1000px) {
-      height: 1512px;
-   }
-   @media (max-width: 768px), (max-height: 500px) {
-      height: 1512px;
-   }
-`;
-
-export const GridContainer = styled.div`
-   display: grid;
-   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-   grid-template-columns: 1fr 1fr 1fr;
-   gap: 30px;
-   height: 100%;
-   width: 80%;
-   @media (max-width: 1000px) {
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-   }
-   @media (max-width: 768px), (max-height: 500px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-`;
-
-export const ProjectLink = styled(Link)`
-   width: 100%;
-   height: 100%;
-   border-radius: 5px;
-   background-size: cover;
-   background-position: center;
-   transition: filter 0.5s ease-out, transform 0.5s ease-out;
-   display: flex;
-   text-decoration: none;
-   filter: brightness(95%);
-   &:hover {
-      filter: brightness(110%);
-      transform: scale(1.025);
-   }
-
-   .project-title {
-      font-size: 2em;
+   @media (max-width: 768px) {
       height: fit-content;
-      align-self: flex-end;
-      margin: 5px;
-      padding: 0 5px;
-      color: #eee;
-      -webkit-text-stroke: 1px #111;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-      font-weight: 700;
-      z-index: 1;
-      @media (max-width: 768px) {
-         align-self: flex-start;
-         font-size: 1.8rem;
-      }
    }
+`;
 
-   &#project-0 {
-      grid-row: 1 / 2;
-      grid-column: 1 / 3;
-      background-image: url('./images/projects/optical character recognition/logo.png');
-      @media (max-width: 1000px) {
-         grid-row: 1 / 2;
-         grid-column: 1 / 3;
+export const Button = styled.div`
+   height: 75px;
+   font-size: 2rem;
+   font-weight: 510;
+   overflow: hidden;
+   user-select: none;
+   padding: 15px 25px;
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-decoration: none;
+   background: linear-gradient(to right, var(--clr1), var(--clr2));
+   transition: color 0.25s, background-color 1s, transform 0.5s,
+      text-shadow 0.25s ease-out;
+   color: #ffffff55;
+   z-index: 1;
+   &:hover {
+      color: #ffffffcc;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+      &::before {
+         width: 700px;
+         height: 700px;
+         top: 50%;
+         left: 50%;
+         top: var(--y, -300px);
+         left: var(--x);
+         transform: translate(-50%, -50%);
+      }
+      &::after {
+         opacity: 0;
       }
    }
-   &#project-1 {
-      grid-row: 1 / 3;
-      grid-column: 3 / 4;
-      background-image: url('./images/projects/shanes chat/logo.png');
-      @media (max-width: 1000px) {
-         grid-row: 2 / 4;
-         grid-column: 1 / 2;
+   &::after {
+      content: '';
+      position: absolute;
+      background-color: #333333;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+      z-index: -1;
+   }
+   &::before {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to right, var(--clr1), var(--clr2));
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      top: var(--y, -300px);
+      left: var(--x);
+      filter: blur(5px);
+      transition: width 1s, height 1s;
+      @media (max-width: 768px) {
+         display: none;
       }
    }
-   &#project-2 {
-      grid-row: 2 / 4;
-      grid-column: 1 / 3;
-      background-image: url('./images/projects/ai learns to drive/logo.png');
-      @media (max-width: 1000px) {
-         grid-row: 2 / 4;
-         grid-column: 2 / 3;
+   @media (max-width: 768px), (max-height: 500px) {
+      &:hover {
+         background: linear-gradient(to right, var(--clr1), var(--clr2));
+      }
+      &::after {
+         transition: 0s;
       }
    }
-   &#project-3 {
-      grid-row: 4 / 6;
-      grid-column: 1 / 2;
-      background-image: url('./images/projects/chess/logo.png');
-      @media (max-width: 1000px) {
-         grid-row: 5 / 7;
-         grid-column: 1 / 2;
+   span,
+   i {
+      pointer-events: none;
+      z-index: 1;
+      white-space: nowrap;
+   }
+`;
+
+export const LinkWrapper = styled.div`
+   width: 350px;
+   height: 75px;
+   transition: 1s;
+   margin: 10px;
+
+   &:hover {
+      ${Button} {
+         transition-delay: 0.2s;
+         transform: translateX(20px);
+         @media (max-width: 768px), (max-height: 500px) {
+            transform: translateX(0);
+            transition: 0s;
+         }
       }
    }
-   &#project-4 {
-      grid-row: 4 / 6;
-      grid-column: 2 / 4;
-      background-image: url('./images/projects/engine 3d/logo.png');
-      @media (max-width: 1000px) {
-         grid-row: 4 / 5;
-         grid-column: 1 / 3;
-      }
-   }
-   &#project-5 {
-      grid-row: 3 / 4;
-      grid-column: 3 / 4;
-      background-image: url('./images/projects/spotify tracker/logo.png');
-      @media (max-width: 1000px) {
-         grid-row: 5 / 7;
-         grid-column: 2 / 3;
-      }
+   a {
+      text-decoration: none;
    }
 `;

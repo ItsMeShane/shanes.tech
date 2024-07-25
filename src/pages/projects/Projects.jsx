@@ -1,34 +1,64 @@
-import React from 'react';
-import { Intro, GridContainer, Container, ProjectLink, GridWrapper } from './ProjectsStyles';
+import React, { useRef, useEffect } from 'react';
+import {
+   Container,
+   ProjectContainer,
+   LinkWrapper,
+   Button,
+   ButtonContainer,
+   Title,
+} from './ProjectsStyles';
+import { Link } from 'react-router-dom';
+import { projects } from './ProjectData';
+
+const Project = ({ title, buttons }) => (
+   <ProjectContainer>
+      <ButtonContainer>
+         {buttons.map((button, index) => (
+            <LinkWrapper key={index}>
+               <Link to={button.link} target={button.target} rel='noopener noreferrer'>
+                  <Button
+                     className='button'
+                     style={{ '--clr1': button.clr1, '--clr2': button.clr2 }}
+                  >
+                     <span>{button.label}</span>
+                     <i className={button.icon}></i>
+                  </Button>
+               </Link>
+            </LinkWrapper>
+         ))}
+      </ButtonContainer>
+      <Title className='mask-effect'>{title}</Title>
+   </ProjectContainer>
+);
 
 const Projects = () => {
+   const containerRef = useRef(null);
+
+   useEffect(() => {
+      const wrapper = containerRef.current;
+      if (!wrapper) return;
+
+      const links = wrapper.querySelectorAll('.button');
+      const handleMouseMove = (e) => {
+         links.forEach((link) => {
+            let mx = e.pageX - link.offsetLeft;
+            let my = e.pageY - link.offsetTop;
+            link.style.setProperty(`--x`, mx + `px`);
+            link.style.setProperty(`--y`, my + `px`);
+         });
+      };
+
+      wrapper.addEventListener('mousemove', handleMouseMove);
+      return () => {
+         wrapper.removeEventListener('mousemove', handleMouseMove);
+      };
+   }, []);
+
    return (
-      <Container>
-         <Intro>
-            <h1>Featured Projects</h1>
-         </Intro>
-         <GridWrapper>
-            <GridContainer>
-               <ProjectLink id='project-0' to='projects/optical-character-recognition'>
-                  <span className='project-title'>Optical Character Recognition</span>
-               </ProjectLink>
-               <ProjectLink id='project-1' to='projects/shanes-chat'>
-                  <span className='project-title'>Shanes Chat</span>
-               </ProjectLink>
-               <ProjectLink id='project-2' to='projects/ai-learns-to-drive'>
-                  <span className='project-title'>AI Learns to Drive</span>
-               </ProjectLink>
-               <ProjectLink id='project-3' to='projects/chess'>
-                  <span className='project-title'>Chess</span>
-               </ProjectLink>
-               <ProjectLink id='project-4' to='projects/3d-rendering-engine'>
-                  <span className='project-title'>3D Rendering Engine</span>
-               </ProjectLink>
-               <ProjectLink id='project-5' to='projects/spotify-tracker'>
-                  <span className='project-title'>Spotify Tracker</span>
-               </ProjectLink>
-            </GridContainer>
-         </GridWrapper>
+      <Container ref={containerRef}>
+         {projects.map((project, index) => (
+            <Project key={index} title={project.title} buttons={project.buttons} />
+         ))}
       </Container>
    );
 };

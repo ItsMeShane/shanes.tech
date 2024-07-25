@@ -7,7 +7,6 @@ import {
    Messages,
    Wrapper,
 } from './AssistantStyles';
-import { Intro } from '../projects/ProjectsStyles';
 import { createThread, loadMessages, sendMessageToAssistant } from './OpenAIAssistant';
 import starterMessages from './OpenAIAssistant';
 import TypeingMessage from './TypeingMessage';
@@ -115,9 +114,7 @@ const Assistant = () => {
 
    return (
       <Wrapper>
-         <Intro>
             <h1>Assistant</h1>
-         </Intro>
          <Container>
             <Header>
                <span>Send a message!</span>

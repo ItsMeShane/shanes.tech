@@ -7,7 +7,7 @@ const Wrapper = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   height: 100dvh;
    width: 100%;
 `;
 const Container = styled.div`
@@ -23,7 +23,7 @@ const Container = styled.div`
 
 const ErrorMessage = styled.p`
    font-size: 2rem;
-   color: #eeeeee;
+   color: #333;
    text-align: center;
    margin-bottom: 40px;
 `;
@@ -37,12 +37,11 @@ const Card = styled.div`
    align-items: center;
    width: 300px;
    height: 75px;
-   color: #ffffff;
    border-radius: 3rem;
    padding: 10px 20px;
-   background: #333333;
-   transition: color 0.25s, background-color 1s;
-   color: #ffffff55;
+   background: #aaa;
+   transition: 1s;
+   color: #333;
 
    &:hover {
       color: #ffffffcc;
@@ -105,7 +104,7 @@ const PageNotFound = () => {
             <ErrorMessage>Whoops, that URL does not exist.</ErrorMessage>
             <Link to='/' ref={linkRef}>
                <Card>
-                  <span>Hero Page</span>
+                  <span>Home</span>
                </Card>
             </Link>
          </Container>

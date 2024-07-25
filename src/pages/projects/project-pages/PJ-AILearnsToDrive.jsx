@@ -1,66 +1,20 @@
 import React from 'react';
-import {
-   ButtonLink,
-   Description,
-   Header,
-   InfoSection,
-   PageContainer,
-   PageWrapper,
-   ShowcasedImage,
-   Tags,
-   HeaderTitle,
-   TitleContainer,
-} from './ProjectPageStyles';
+import { ProjectPage } from './ProjectPage';
+
+const images = [
+   {
+      src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamcxNjc5NGwyMDhodjAwNHM1eWdudnV1d2hwN3BjeGVhbmxzZ3NmZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2Cce6hv9NcFTW/giphy.gif',
+   },
+   {
+      src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWY4bjgyeTN2aDJkM3lrNmR0M2FlOXB0dHZ2NmcxYjJyM21veG02eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IDoDo2TeidxKbm/giphy.gif',
+   },
+   {
+      src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmt5aXdqcXhjYWNwMm8wZDB5ZmV4dXI2Z25rNTdybjJ1NHgycndkYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lRRvqQ8R9e8czFJyIw/giphy-downsized-large.gif',
+   },
+]
 
 const PJAILearnsToDrive = () => {
-   return (
-      <PageWrapper>
-         <PageContainer>
-            <Header>
-               <InfoSection>
-                  <TitleContainer>
-                     <HeaderTitle>AI Learns to Drive</HeaderTitle>
-                     <div className='button-container'>
-                        <ButtonLink
-                           style={{ '--background': '#549468' }}
-                           href=''
-                           target='_blank'
-                           rel='noopener noreferrer'
-                        >
-                           <span>Visit Site</span>
-                           <ion-icon name='open-outline'></ion-icon>
-                        </ButtonLink>
-                        <ButtonLink
-                           style={{ '--background': '#5e5494' }}
-                           href='https://github.com/ItsMeShane/'
-                           target='_blank'
-                           rel='noopener noreferrer'
-                        >
-                           <span>GitHub</span>
-                           <ion-icon name='logo-github'></ion-icon>
-                        </ButtonLink>
-                     </div>
-                  </TitleContainer>
-                  <Description>
-                     You might learn from your mistakes, but AI learns faster! Watch in
-                     real time as my AI learns how to drive through trial and error.
-                  </Description>
-                  <Tags>
-                     <span style={{ '--background': '#3924ad' }}>JavaScript</span>
-                     <span style={{ '--background': '#9d2195' }}>Neural Networks</span>
-                     <span style={{ '--background': '#21809d' }}>No Libraries</span>
-                  </Tags>
-               </InfoSection>
-
-               <ShowcasedImage
-                  src='/images/projects/ai learns to drive/showcase1.png' 
-                  alt='ai learns to drive'
-                  width='250px'
-               />
-            </Header>
-         </PageContainer>
-      </PageWrapper>
-   );
+   return <ProjectPage title='AI Learns to Drive' images={images}/>;
 };
 
 export default PJAILearnsToDrive;
