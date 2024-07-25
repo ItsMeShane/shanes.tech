@@ -3,13 +3,19 @@ import { ProjectPage } from './ProjectPage';
 
 const images = [
    {
-      src: 'https://media.giphy.com/media/4gmfI8wXlqMQt7BDUb/giphy.gif',
+      src: 'https://i.imgur.com/bvydIqT.gif',
    },
    {
-      src: 'https://media.giphy.com/media/qduv40oZ997wNDrQr5/giphy.gif',
+      src: 'https://i.imgur.com/gzTwOpi.gif',
    },
    {
-      src: 'https://media.giphy.com/media/uHUvG769NmRRDWrTlr/giphy.gif',
+      src: 'https://i.imgur.com/AMBDveF.gif',
+   },
+   {
+      src: 'https://i.imgur.com/T6riAkB.png',
+   },
+   {
+      src: 'https://i.imgur.com/UA5RWXU.png',
    },
 ];
 
