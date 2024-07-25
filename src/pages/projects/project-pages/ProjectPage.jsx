@@ -18,20 +18,23 @@ export const ProjectPage = ({ title, images }) => {
          },
          { threshold: 0.5 }
       );
-
-      imageRefs.current.forEach((img) => {
+   
+      const currentImageRefs = imageRefs.current;
+   
+      currentImageRefs.forEach((img) => {
          if (img) {
             observer.observe(img);
          }
       });
       return () => {
-         imageRefs.current.forEach((img) => {
+         currentImageRefs.forEach((img) => {
             if (img) {
                observer.unobserve(img);
             }
          });
       };
    }, [images]);
+   
 
    const handleNavClick = (index) => {
       if (imageRefs.current[index]) {
