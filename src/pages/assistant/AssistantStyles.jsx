@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
    width: 800px;
    height: 600px;
-   background-color: #333;
+   background-color: #aaa;
    display: flex;
    flex-direction: column;
    border-radius: 10px;
@@ -101,7 +101,7 @@ export const Input = styled.div`
 
    textarea {
       font-size: 1rem;
-      background-color: #666;
+      background-color: #eeeeee;
       flex: 1;
       min-width: 0;
       resize: none;

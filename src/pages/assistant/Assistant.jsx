@@ -114,12 +114,12 @@ const Assistant = () => {
 
    return (
       <Wrapper>
-            <h1>Assistant</h1>
+         <h1>Assistant</h1>
          <Container>
             <Header>
                <span>Send a message!</span>
                <button onClick={resetThread}>
-                  <ion-icon name='refresh-outline'></ion-icon>{' '}
+               <i class="fa-solid fa-rotate-right"></i>
                </button>
             </Header>
             <Messages ref={messagesRef}>
@@ -141,7 +141,7 @@ const Assistant = () => {
                   onKeyDown={handleKeyDown}
                />
                <InputButton onClick={sendMessage}>
-                  <ion-icon name={'send-outline'}></ion-icon>
+               <i class="fa-regular fa-paper-plane"></i>
                </InputButton>
                <InputButton onClick={handleDiceClick}>🎲</InputButton>
             </Input>

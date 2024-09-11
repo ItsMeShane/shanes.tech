@@ -11,7 +11,7 @@ const typingAnimation = keyframes`
 `;
 
 const TypeingMessageWrapper = styled.div`
-   background-color: #aaaaaa;
+   background-color: #d2d2d2;
    border-radius: 10px 10px 10px 0px;
    width: 50px;
    height: 30px;
