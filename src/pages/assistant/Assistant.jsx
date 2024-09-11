@@ -119,7 +119,7 @@ const Assistant = () => {
             <Header>
                <span>Send a message!</span>
                <button onClick={resetThread}>
-               <i class="fa-solid fa-rotate-right"></i>
+                  <i className='fa-solid fa-rotate-right'></i>
                </button>
             </Header>
             <Messages ref={messagesRef}>
@@ -141,7 +141,7 @@ const Assistant = () => {
                   onKeyDown={handleKeyDown}
                />
                <InputButton onClick={sendMessage}>
-               <i class="fa-regular fa-paper-plane"></i>
+                  <i className='fa-regular fa-paper-plane'></i>
                </InputButton>
                <InputButton onClick={handleDiceClick}>🎲</InputButton>
             </Input>
