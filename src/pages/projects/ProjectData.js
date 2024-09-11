@@ -76,6 +76,14 @@ export const projects = [
              clr1: '#545994',
              clr2: '#0015ff',
           },
+          {
+             label: 'Live Demo',
+             link: 'https://opticalcharacterrecognition.onrender.com/',
+             target: '_blank',
+             icon: 'fa-solid fa-arrow-up-right-from-square',
+             clr1: '#6e5494',
+             clr2: '#6600ff',
+          },
        ],
     },
     {
