@@ -70,7 +70,7 @@ export const projects = [
           },
           {
              label: 'GitHub',
-             link: 'https://github.com/ItsMeShane/',
+             link: 'https://github.com/ItsMeShane/OpticalCharacterRecognition',
              target: '_blank',
              icon: 'fa-solid fa-arrow-up-right-from-square',
              clr1: '#545994',
