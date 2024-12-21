@@ -15,9 +15,8 @@ export const Title = styled.span`
    align-items: center;
    text-align:left;
    max-width: 750px;
-   user-select: none;
    font-size: 100px;
-   color:#000;
+   color:#222;
 
    &.mask-effect {
       mask-image: radial-gradient(
