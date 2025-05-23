@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import VanillaTilt from 'vanilla-tilt';
 import { Link } from 'react-router-dom';
+import { Title } from '../projects/ProjectsStyles';
 
 const Hero = () => {
    const containerRef = useRef(null);
@@ -15,35 +16,49 @@ const Hero = () => {
       });
    }, []);
 
+   const handleMouseEnter = (color) => {
+      containerRef.current.style.backgroundColor = color;
+   };
+
+   const handleMouseLeave = () => {
+      containerRef.current.style.backgroundColor = 'transparent';
+   };
 
    return (
+      <Wrapper>
          <Container ref={containerRef}>
-            <Title>Shane Koester</Title>
+            <Title className='center'>Shane Koester</Title>
             <List>
-               <li style={{ '--clr': '#0a66c2' }}>
+               <li style={{ '--clr': '#4fa2a8' }}>
                   <ButtonLink
                      to='https://www.linkedin.com/in/shanekoester/'
                      target='_blank'
                      rel='noopener noreferrer'
                      className='tilt'
+                     onMouseEnter={() => handleMouseEnter('#4fa2a8')}
+                     onMouseLeave={handleMouseLeave}
                   >
                      <i className='fa-brands fa-linkedin-in'></i>
                   </ButtonLink>
                </li>
-               <li style={{ '--clr': '#880ac2' }}>
+               <li style={{ '--clr': '#5b4fa8' }}>
                   <ButtonLink
                      to='https://www.github.com/ItsMeShane'
                      target='_blank'
                      rel='noopener noreferrer'
                      className='tilt'
+                     onMouseEnter={() => handleMouseEnter('#5b4fa8')}
+                     onMouseLeave={handleMouseLeave}
                   >
                      <i className='fa-brands fa-github'></i>
                   </ButtonLink>
                </li>
-               {/* <li style={{ '--clr': '#a84f4f' }}>
+               <li style={{ '--clr': '#a84f4f' }}>
                   <ButtonLink
                      to='/projects'
                      className='tilt'
+                     onMouseEnter={() => handleMouseEnter('#a84f4f')}
+                     onMouseLeave={handleMouseLeave}
                   >
                      <i className='fa-solid fa-layer-group'></i>
                   </ButtonLink>
@@ -52,17 +67,27 @@ const Hero = () => {
                   <ButtonLink
                      to='/chat'
                      className='tilt'
+                     onMouseEnter={() => handleMouseEnter('#69a84f')}
+                     onMouseLeave={handleMouseLeave}
                   >
                      <i className='fa-solid fa-message'></i>
                   </ButtonLink>
-               </li> */}
+               </li>
             </List>
          </Container>
+      </Wrapper>
    );
 };
 
 export default Hero;
- 
+
+const Wrapper = styled.div`
+   height: 100dvh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+`;
 
 const Container = styled.div`
    width: 100%;
@@ -72,12 +97,7 @@ const Container = styled.div`
    justify-content: center;
    align-items: center;
    transition: background-color 0.5s;
-   gap: 20px;
-   
-   @media (max-width: 1100px) {
-      padding-top:50px;
-      padding-bottom:50px;
-   }
+   gap: 50px;
 `;
 
 
@@ -128,23 +148,5 @@ const ButtonLink = styled(Link)`
          transform: scale(1.5) translateZ(50px);
          color: #fff;
       }
-   }
-`;
-export const Title = styled.span`
-   display: flex;
-   justify-content: left;
-   width:100%;
-   align-items: center;
-   text-align:left;
-   max-width: 750px;
-   font-size: 100px;
-   color:#222;
-   white-space: nowrap;
-   justify-content: center;
-
-   @media (max-width: 1100px) {
-      font-size: 50px;
-      text-align:center;
-      justify-content:center;
    }
 `;

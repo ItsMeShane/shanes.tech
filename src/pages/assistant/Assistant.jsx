@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
    Container,
+   Header,
    Input,
    InputButton,
    Messages,
+   Wrapper,
 } from './AssistantStyles';
 import { createThread, loadMessages, sendMessageToAssistant } from './OpenAIAssistant';
 import starterMessages from './OpenAIAssistant';
@@ -15,7 +17,6 @@ const Assistant = () => {
    const [messageList, setMessageList] = useState([starterMessages]);
    const [threadId, setThreadId] = useState(null);
    const [isTypeing, setIsTypeing] = useState(false);
-   const textareaRef = useRef(null);
 
    // loads saved thread & messages if saved locally
    // else creates new thread & messages
@@ -71,7 +72,6 @@ const Assistant = () => {
       ]);
       // clear text area
       setTextAreaValue('');
-      textAreaHeightAdjust();
 
       // show typing visual
       let typingTimeout = setTimeout(function () {
@@ -110,52 +110,43 @@ const Assistant = () => {
 
    const handleDiceClick = () => {
       setTextAreaValue(getNextMessage());
-      textAreaHeightAdjust();
    };
-   const textAreaHeightAdjust = () => {
-      const element = textareaRef.current;
-      element.style.height = `1px`;
-      requestAnimationFrame(() => {
-         element.style.height = `${element.scrollHeight}px`;
-      });
-   };
-   useEffect(() => {
-      textAreaHeightAdjust();
-   }, []);
 
    return (
-      <Container>
-         <button id='resetThread' onClick={resetThread}>
-            <i className='fa-solid fa-rotate-right'></i>
-         </button>
-         <Messages ref={messagesRef}>
-            {messageList.map((message, index) => (
-               <span
-                  key={index}
-                  className={message.sender === 'user' ? 'user' : 'assistant'}
-               >
-                  {message.text}
-               </span>
-            ))}
-            {isTypeing && <TypeingMessage />}
-         </Messages>
-         <Input>
-            <textarea
-               ref={textareaRef}
-               value={textAreaValue}
-               placeholder='Ask about Shane!'
-               onChange={(e) => setTextAreaValue(e.target.value)}
-               onKeyDown={handleKeyDown}
-               onInput={textAreaHeightAdjust}
-            />
-            <InputButton onClick={sendMessage}>
-               <i className='fa-regular fa-paper-plane'></i>
-            </InputButton>
-            <InputButton onClick={handleDiceClick}>
-               <i className='fa-solid fa-shuffle'></i>
-            </InputButton>
-         </Input>
-      </Container>
+      <Wrapper>
+         <h1>Assistant</h1>
+         <Container>
+            <Header>
+               <span>Send a message!</span>
+               <button onClick={resetThread}>
+                  <i className='fa-solid fa-rotate-right'></i>
+               </button>
+            </Header>
+            <Messages ref={messagesRef}>
+               {messageList.map((message, index) => (
+                  <span
+                     key={index}
+                     className={message.sender === 'user' ? 'user' : 'assistant'}
+                  >
+                     {message.text}
+                  </span>
+               ))}
+               {isTypeing && <TypeingMessage />}
+            </Messages>
+            <Input>
+               <textarea
+                  value={textAreaValue}
+                  placeholder='Ask about Shane!'
+                  onChange={(e) => setTextAreaValue(e.target.value)}
+                  onKeyDown={handleKeyDown}
+               />
+               <InputButton onClick={sendMessage}>
+                  <i className='fa-regular fa-paper-plane'></i>
+               </InputButton>
+               <InputButton onClick={handleDiceClick}>🎲</InputButton>
+            </Input>
+         </Container>
+      </Wrapper>
    );
 };
 
